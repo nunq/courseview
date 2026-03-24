@@ -1,10 +1,22 @@
 [
   {
-    "label": "M.Sc. Informatik SS26",
+    "label": "SS26 – Informatik – Master",
     "url": "datasets/courses_ma_ss26.json"
   },
   {
-    "label": "B.Sc. Informatik SS26",
+    "label": "SS26 – Informatik – Bachelor",
     "url": "datasets/courses_ba_ss26.json"
+  },
+  {
+    "label": "SS26 – Informatik – Lehramt (Gym)",
+    "url": "datasets/courses_la-inf-gym_ss26.json"
+  },
+  {
+    "label": "SS26 – Mathematik – Lehramt (Gym)",
+    "url": "datasets/courses_la-math-gym_ss26.json"
+  },
+  {
+    "label": "SS26 – Informatik & Mathematik – Lehramt (Gym)",
+    "url": "datasets/courses_la-gym_ss26.json"
   }
 ]
