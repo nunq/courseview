@@ -1,6 +1,6 @@
 # courseview
 
-visualize available courses in a weekly calender view
+visualize available courses in a weekly calender view, desktop screen required
 
 link: https://nunq.github.io/courseview/
 

@@ -423,9 +423,39 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
+
+/* ===== MOBILE WARNING ===== */
+#mobile-warning {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #2c3e50;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  padding: 32px;
+}
+#mobile-warning .icon { font-size: 56px; }
+#mobile-warning h2 { font-size: 22px; font-weight: 700; }
+#mobile-warning p { font-size: 15px; opacity: 0.8; max-width: 320px; line-height: 1.5; }
+@media (max-width: 768px) {
+  #mobile-warning { display: flex; }
+}
 </style>
 </head>
 <body>
+
+<!-- Mobile warning overlay -->
+<div id="mobile-warning">
+  <div class="icon">🖥️</div>
+  <h2>Best viewed on desktop</h2>
+  <p>This course planner requires a larger screen. Please open it on a desktop or laptop computer.</p>
+  <p><a href="https://github.com/nunq/courseview" target="_blank" style="color:#3498db;text-decoration:underline;">View on GitHub</a></p>
+</div>
 
 <!-- Top bar -->
 <div id="topbar">
