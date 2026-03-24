@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modulplan Master Informatik</title>
+
+<!-- FullCalendar v6 -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  background: #f5f7fa;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ===== TOPBAR ===== */
+#topbar {
+  background: #2c3e50;
+  color: #fff;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  z-index: 100;
+}
+#topbar h1 { font-size: 16px; font-weight: 600; flex: 1; }
+#topbar button {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.15s;
+}
+#topbar button:hover { background: rgba(255,255,255,0.25); }
+#topbar button.active { background: #e74c3c; }
+
+/* AB Week toggle group */
+#ab-group { display: flex; gap: 4px; }
+#ab-group button {
+  padding: 5px 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+#ab-group button.active {
+  background: #3498db;
+  border-color: #3498db;
+}
+
+/* ===== MAIN LAYOUT ===== */
+#main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ===== SIDEBAR ===== */
+#sidebar {
+  width: 320px;
+  min-width: 320px;
+  background: #fff;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width 0.2s, min-width 0.2s;
+}
+#sidebar.collapsed { width: 0; min-width: 0; }
+
+#sidebar-inner {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+#sidebar-toggle {
+  position: absolute;
+  left: 320px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  padding: 8px 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: left 0.2s;
+  line-height: 1;
+}
+#sidebar.collapsed ~ #sidebar-toggle { left: 0; }
+
+/* sidebar sections */
+.sidebar-section { margin-bottom: 8px; }
+.sidebar-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+  padding: 6px 4px 4px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar-global-actions { display: flex; gap: 6px; }
+.sidebar-global-actions button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 2px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 11px;
+  color: #555;
+}
+.sidebar-global-actions button:hover { background: #f0f0f0; }
+
+/* module entries */
+.module-entry { border: 1px solid #e8e8e8; border-radius: 4px; margin-bottom: 6px; overflow: hidden; }
+.module-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 6px;
+  background: #f8f9fa;
+  cursor: pointer;
+  user-select: none;
+}
+.module-header:hover { background: #f0f2f5; }
+.module-number { font-size: 10px; color: #888; flex-shrink: 0; }
+.module-name { flex: 1; font-size: 12px; font-weight: 500; line-height: 1.3; }
+.module-cat-badge {
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 10px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.module-expand-icon { font-size: 10px; color: #aaa; flex-shrink: 0; }
+
+.module-courses { padding: 4px 6px 6px; display: none; }
+.module-entry.expanded .module-courses { display: block; }
+
+/* course rows */
+.course-row { margin: 3px 0; }
+.course-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 0;
+}
+.course-label:hover { color: #2c3e50; }
+.course-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.course-type-badge {
+  font-size: 10px;
+  color: #888;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.slot-group-rows { padding-left: 22px; }
+.slot-group-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  margin: 1px 0;
+  cursor: pointer;
+}
+.slot-group-row:hover { color: #2c3e50; }
+
+/* color override button */
+.color-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 0 2px;
+  opacity: 0.5;
+  line-height: 1;
+}
+.color-btn:hover { opacity: 1; }
+
+/* custom events section */
+#custom-events-list { padding: 2px 0; }
+.custom-event-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  padding: 2px 0;
+}
+.custom-event-actions { margin-left: auto; display: flex; gap: 2px; }
+.custom-event-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0 2px;
+  opacity: 0.6;
+}
+.custom-event-actions button:hover { opacity: 1; }
+
+#add-event-btn {
+  width: 100%;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 4px;
+}
+#add-event-btn:hover { background: #2980b9; }
+
+/* ===== OPTIMIZER PANEL ===== */
+#optimizer {
+  border-top: 1px solid #e0e0e0;
+  background: #fff;
+  flex-shrink: 0;
+}
+#optimizer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+  user-select: none;
+}
+#optimizer-header:hover { background: #f5f5f5; }
+#optimizer-body { padding: 8px 10px 10px; display: none; }
+#optimizer.open #optimizer-body { display: block; }
+.opt-row { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 12px; }
+.opt-row label { color: #555; flex-shrink: 0; }
+.opt-row input[type="number"] { width: 48px; padding: 3px 5px; border: 1px solid #ddd; border-radius: 3px; }
+.opt-row input[type="time"] { padding: 3px 5px; border: 1px solid #ddd; border-radius: 3px; }
+.opt-row input[type="checkbox"] { cursor: pointer; }
+#run-optimizer {
+  width: 100%;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 6px;
+}
+#run-optimizer:hover { background: #219a52; }
+#opt-results { margin-top: 8px; font-size: 12px; }
+.opt-result-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 2px 0;
+}
+.opt-result-row:hover, .opt-result-row.selected { background: #ebf5fb; }
+.opt-result-best { font-weight: 600; color: #27ae60; }
+.opt-result-days { flex: 1; }
+.opt-result-conflicts { color: #e74c3c; font-weight: 500; }
+
+/* ===== CALENDAR WRAPPER ===== */
+#calendar-wrapper {
+  flex: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+  min-width: 0;
+}
+#calendar {
+  height: 100%;
+}
+
+/* ===== MODAL ===== */
+#modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+#modal-overlay.open { display: flex; }
+#modal {
+  background: #fff;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+#modal h2 { font-size: 16px; margin-bottom: 14px; color: #2c3e50; }
+.form-row { margin: 8px 0; }
+.form-row label { display: block; font-size: 12px; color: #555; margin-bottom: 3px; font-weight: 500; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.form-row textarea { resize: vertical; min-height: 50px; }
+.form-row input[type="color"] { padding: 2px; height: 32px; cursor: pointer; }
+.modal-actions { display: flex; gap: 8px; margin-top: 14px; }
+.modal-actions button { flex: 1; padding: 8px; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; }
+#modal-save { background: #3498db; color: #fff; }
+#modal-save:hover { background: #2980b9; }
+#modal-delete { background: #e74c3c; color: #fff; display: none; }
+#modal-delete:hover { background: #c0392b; }
+#modal-cancel { background: #ecf0f1; color: #444; }
+#modal-cancel:hover { background: #dde1e7; }
+
+/* color reset link */
+#modal-color-reset {
+  font-size: 11px;
+  color: #3498db;
+  cursor: pointer;
+  margin-left: 6px;
+  text-decoration: underline;
+}
+
+/* tooltip */
+#fc-tooltip {
+  position: fixed;
+  background: rgba(0,0,0,0.82);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 9999;
+  max-width: 280px;
+  line-height: 1.5;
+  display: none;
+}
+#fc-tooltip.visible { display: block; }
+
+/* FullCalendar overrides */
+.fc .fc-toolbar-title { font-size: 14px; }
+.fc .fc-event { cursor: pointer; font-size: 11px; }
+.fc .fc-event-title { font-weight: 500; }
+.fc-event-block-label {
+  font-size: 9px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div id="topbar">
+  <h1>📅 Modulplan – Master Informatik SS 2026</h1>
+  <span style="font-size:12px;opacity:0.7">Wochenmuster:</span>
+  <div id="ab-group">
+    <button data-ab="both" class="active">A+B</button>
+    <button data-ab="A">Nur A</button>
+    <button data-ab="B">Nur B</button>
+  </div>
+  <button id="btn-select-all">Alle ✓</button>
+  <button id="btn-deselect-all">Alle ✗</button>
+  <button id="btn-toggle-sidebar">◀ Sidebar</button>
+</div>
+
+<!-- Main layout -->
+<div id="main">
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div id="sidebar-inner">
+      <!-- Parsed modules -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Module</div>
+        <div id="module-list"></div>
+      </div>
+
+      <!-- Custom events -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Eigene Termine</div>
+        <div id="custom-events-list"></div>
+        <button id="add-event-btn">+ Termin hinzufügen</button>
+      </div>
+    </div>
+
+    <!-- Work Day Optimizer -->
+    <div id="optimizer">
+      <div id="optimizer-header">
+        <span>⚡ Arbeitstag-Optimierer</span>
+        <span id="optimizer-arrow">▼</span>
+      </div>
+      <div id="optimizer-body">
+        <div class="opt-row">
+          <label>Arbeitstage pro Woche:</label>
+          <input type="number" id="opt-n" value="2" min="1" max="5">
+        </div>
+        <div class="opt-row">
+          <label>Arbeitszeit:</label>
+          <input type="time" id="opt-start" value="11:00">
+          <span>–</span>
+          <input type="time" id="opt-end" value="15:00">
+        </div>
+        <div class="opt-row">
+          <input type="checkbox" id="opt-morning-ok">
+          <label for="opt-morning-ok">Frühe Termine (vor Arbeitsbeginn) OK</label>
+        </div>
+        <button id="run-optimizer">Optimieren</button>
+        <div id="opt-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendar -->
+  <div id="calendar-wrapper">
+    <div id="calendar"></div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modal-overlay">
+  <div id="modal">
+    <h2 id="modal-title">Termin hinzufügen</h2>
+    <div class="form-row">
+      <label>Titel *</label>
+      <input type="text" id="f-title" placeholder="Titel des Termins">
+    </div>
+    <div class="form-row">
+      <label>Wochentag</label>
+      <select id="f-day">
+        <option value="monday">Montag</option>
+        <option value="tuesday">Dienstag</option>
+        <option value="wednesday">Mittwoch</option>
+        <option value="thursday">Donnerstag</option>
+        <option value="friday">Freitag</option>
+      </select>
+    </div>
+    <div class="form-row" style="display:flex;gap:8px;">
+      <div style="flex:1">
+        <label>Beginn</label>
+        <input type="time" id="f-start" value="09:00">
+      </div>
+      <div style="flex:1">
+        <label>Ende</label>
+        <input type="time" id="f-end" value="10:30">
+      </div>
+    </div>
+    <div class="form-row">
+      <label>Raum / Ort</label>
+      <input type="text" id="f-room" placeholder="optional">
+    </div>
+    <div class="form-row">
+      <label>Notizen</label>
+      <textarea id="f-notes" placeholder="optional"></textarea>
+    </div>
+    <div class="form-row">
+      <label>Farbe
+        <span id="modal-color-reset" title="Farbe zurücksetzen">Zurücksetzen</span>
+      </label>
+      <input type="color" id="f-color" value="#3498db">
+    </div>
+    <div class="modal-actions">
+      <button id="modal-save">Speichern</button>
+      <button id="modal-delete">Löschen</button>
+      <button id="modal-cancel">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tooltip -->
+<div id="fc-tooltip"></div>
+
+<script>
+'use strict';
+/* =====================================================================
+   CONSTANTS & CONFIG
+   ===================================================================== */
+const REFERENCE_MONDAY = '2026-01-05'; // arbitrary Monday for fixed week view
+
+const CATEGORY_COLORS = {
+  'Kernmodul':        '#2980b9',
+  'Vertiefungsmodul': '#16a085',
+  'Seminarmodul':     '#27ae60',
+  'Ergänzungsbereich':'#e67e22',
+  'Pflichtmodul':     '#8e44ad',
+  'default':          '#7f8c8d',
+};
+
+const DAY_OFFSETS = {
+  monday: 0, tuesday: 1, wednesday: 2, thursday: 3, friday: 4,
+};
+
+const LS_CUSTOM   = 'modulplan_custom_events';
+const LS_COLORS   = 'modulplan_colors';
+const LS_CHECKED  = 'modulplan_checked';
+const LS_EXPANDED = 'modulplan_expanded';
+
+/* =====================================================================
+   STATE
+   ===================================================================== */
+let calendar = null;
+let coursesData = null;       // { modules: [...] }
+let abMode = 'both';          // 'A' | 'B' | 'both'
+let colorOverrides = {};      // id → hex color string
+let customEvents = [];        // array of custom event objects
+let checkedState = {};        // id → bool
+let expandedState = {};       // moduleId → bool
+let selectedWorkDays = null;  // array of day names for bg shading
+
+/* ===== LocalStorage helpers ===== */
+function lsGet(key, fallback) {
+  try {
+    const v = localStorage.getItem(key);
+    return v !== null ? JSON.parse(v) : fallback;
+  } catch { return fallback; }
+}
+function lsSet(key, val) {
+  try { localStorage.setItem(key, JSON.stringify(val)); } catch {}
+}
+
+/* =====================================================================
+   COLOR HELPERS
+   ===================================================================== */
+function categoryColor(category) {
+  return CATEGORY_COLORS[category] || CATEGORY_COLORS['default'];
+}
+function eventColor(id, category) {
+  return colorOverrides[id] || categoryColor(category);
+}
+function lighten(hex, amount = 0.5) {
+  // lighten a hex color for background
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  const mix = (c) => Math.round(c + (255 - c) * amount);
+  return `rgb(${mix(r)},${mix(g)},${mix(b)})`;
+}
+
+/* =====================================================================
+   DATE HELPERS
+   ===================================================================== */
+function dateForDay(dayName) {
+  const offset = DAY_OFFSETS[dayName];
+  if (offset === undefined) return null;
+  const d = new Date(REFERENCE_MONDAY + 'T00:00:00');
+  d.setDate(d.getDate() + offset);
+  return d.toISOString().slice(0, 10);
+}
+
+function slotToFCEvent(slot, courseId, slotIdx, title, category) {
+  if (!slot.day || slot.isBlockEvent) return null;
+  if (!slot.timeStart || !slot.timeEnd) return null;
+
+  const date = dateForDay(slot.day);
+  if (!date) return null;
+
+  const id = `${courseId}-${slotIdx}`;
+  const color = eventColor(id, category);
+
+  return {
+    id,
+    title,
+    start: `${date}T${slot.timeStart}`,
+    end:   `${date}T${slot.timeEnd}`,
+    backgroundColor: color,
+    borderColor: color,
+    textColor: '#fff',
+    extendedProps: {
+      slotGroup: slot.slotGroup,
+      weekPattern: slot.weekPattern,
+      room: slot.room,
+      isOnline: slot.isOnline,
+      category,
+      courseId,
+      slotIdx,
+      isCustom: false,
+    },
+  };
+}
+
+/* =====================================================================
+   BUILD FC EVENTS FROM PARSED DATA
+   ===================================================================== */
+function buildParsedEvents() {
+  const events = [];
+  if (!coursesData) return events;
+
+  for (const mod of coursesData.modules) {
+    for (let ci = 0; ci < mod.courses.length; ci++) {
+      const course = mod.courses[ci];
+      const courseId = course.id;
+
+      if (course.hasMultipleSlotGroups) {
+        // Group slots by slotGroup label
+        const byGroup = {};
+        for (const slot of course.slots) {
+          const g = slot.slotGroup || '_';
+          if (!byGroup[g]) byGroup[g] = [];
+          byGroup[g].push(slot);
+        }
+        for (const [grp, slots] of Object.entries(byGroup)) {
+          const checkId = `${courseId}-grp-${grp}`;
+          if (!checkedState[checkId]) continue;
+
+          for (let si = 0; si < slots.length; si++) {
+            const slot = slots[si];
+            if (!abVisible(slot.weekPattern)) continue;
+            const title = `${course.title || course.type}${grp !== '_' ? ' ['+grp+']' : ''}`;
+            const ev = slotToFCEvent(slot, `${courseId}-grp-${grp}`, si, title, mod.category);
+            if (ev) {
+              ev.extendedProps = {
+                ...ev.extendedProps,
+                moduleName: mod.name,
+                moduleNumber: mod.number,
+                courseType: course.type,
+                lecturers: course.lecturers,
+                additionalInfo: course.additionalInfo,
+                slotGroup: grp,
+              };
+              events.push(ev);
+            }
+          }
+        }
+      } else {
+        if (!checkedState[courseId]) continue;
+        for (let si = 0; si < course.slots.length; si++) {
+          const slot = course.slots[si];
+          if (!abVisible(slot.weekPattern)) continue;
+          const title = course.title || course.type;
+          const ev = slotToFCEvent(slot, courseId, si, title, mod.category);
+          if (ev) {
+            ev.extendedProps = {
+              ...ev.extendedProps,
+              moduleName: mod.name,
+              moduleNumber: mod.number,
+              courseType: course.type,
+              lecturers: course.lecturers,
+              additionalInfo: course.additionalInfo,
+            };
+            events.push(ev);
+          }
+        }
+      }
+    }
+  }
+  return events;
+}
+
+function abVisible(weekPattern) {
+  if (!weekPattern) return true;
+  if (abMode === 'both') return true;
+  return weekPattern === abMode;
+}
+
+/* =====================================================================
+   BUILD FC EVENTS FROM CUSTOM DATA
+   ===================================================================== */
+function buildCustomEvents() {
+  return customEvents
+    .filter(ev => checkedState[ev.id] !== false)
+    .map(ev => {
+      const date = dateForDay(ev.day);
+      if (!date) return null;
+      const color = eventColor(ev.id, null) || ev.color || '#3498db';
+      return {
+        id: ev.id,
+        title: ev.title,
+        start: `${date}T${ev.timeStart}`,
+        end:   `${date}T${ev.timeEnd}`,
+        backgroundColor: color,
+        borderColor: color,
+        textColor: '#fff',
+        extendedProps: {
+          room: ev.room,
+          notes: ev.notes,
+          isCustom: true,
+          category: null,
+        },
+      };
+    })
+    .filter(Boolean);
+}
+
+/* =====================================================================
+   BACKGROUND WORK BLOCK EVENTS
+   ===================================================================== */
+function buildWorkBlockEvents(days) {
+  if (!days || !days.length) return [];
+  const start = document.getElementById('opt-start').value || '11:00';
+  const end   = document.getElementById('opt-end').value   || '15:00';
+  return days.map(day => {
+    const date = dateForDay(day);
+    return {
+      start: `${date}T${start}`,
+      end:   `${date}T${end}`,
+      display: 'background',
+      backgroundColor: 'rgba(231,76,60,0.15)',
+      overlap: true,
+    };
+  });
+}
+
+/* =====================================================================
+   REFRESH CALENDAR
+   ===================================================================== */
+function refreshCalendar() {
+  if (!calendar) return;
+  const events = [
+    ...buildParsedEvents(),
+    ...buildCustomEvents(),
+    ...buildWorkBlockEvents(selectedWorkDays),
+  ];
+  calendar.removeAllEvents();
+  calendar.addEventSource(events);
+}
+
+/* =====================================================================
+   SIDEBAR RENDERING
+   ===================================================================== */
+function renderSidebar() {
+  if (!coursesData) return;
+  const container = document.getElementById('module-list');
+  container.innerHTML = '';
+
+  for (const mod of coursesData.modules) {
+    const entry = document.createElement('div');
+    entry.className = 'module-entry' + (expandedState[mod.id] ? ' expanded' : '');
+
+    // Module header
+    const header = document.createElement('div');
+    header.className = 'module-header';
+
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = isModuleChecked(mod);
+    cb.indeterminate = isModuleIndeterminate(mod);
+    cb.addEventListener('change', () => {
+      toggleModule(mod, cb.checked);
+    });
+    cb.addEventListener('click', e => e.stopPropagation());
+
+    const dot = document.createElement('span');
+    dot.className = 'course-color-dot';
+    dot.style.background = categoryColor(mod.category);
+
+    const num = document.createElement('span');
+    num.className = 'module-number';
+    num.textContent = mod.number;
+
+    const name = document.createElement('span');
+    name.className = 'module-name';
+    name.textContent = mod.name;
+
+    const badge = document.createElement('span');
+    badge.className = 'module-cat-badge';
+    badge.style.background = categoryColor(mod.category);
+    const semBadge = document.createElement('span');
+    semBadge.style.cssText = 'font-size:10px;color:#aaa;flex-shrink:0;';
+    semBadge.textContent = `S${mod.semester}`;
+
+    const expandIcon = document.createElement('span');
+    expandIcon.className = 'module-expand-icon';
+    expandIcon.textContent = expandedState[mod.id] ? '▲' : '▼';
+
+    header.append(cb, dot, num, name, semBadge, expandIcon);
+    header.addEventListener('click', () => {
+      expandedState[mod.id] = !expandedState[mod.id];
+      lsSet(LS_EXPANDED, expandedState);
+      entry.classList.toggle('expanded', expandedState[mod.id]);
+      expandIcon.textContent = expandedState[mod.id] ? '▲' : '▼';
+    });
+
+    // Courses
+    const coursesDiv = document.createElement('div');
+    coursesDiv.className = 'module-courses';
+
+    for (const course of mod.courses) {
+      const courseDiv = document.createElement('div');
+      courseDiv.className = 'course-row';
+
+      if (course.hasMultipleSlotGroups) {
+        // Show header label (no top-level checkbox – individual slot groups)
+        const typLabel = document.createElement('div');
+        typLabel.style.cssText = 'font-size:11px;color:#888;padding:2px 0 1px;';
+        typLabel.textContent = `${course.type}: ${course.title || ''}`;
+        courseDiv.appendChild(typLabel);
+
+        // Slot group checkboxes
+        const byGroup = {};
+        for (const slot of course.slots) {
+          const g = slot.slotGroup || '_';
+          if (!byGroup[g]) byGroup[g] = [];
+          byGroup[g].push(slot);
+        }
+        const groupRows = document.createElement('div');
+        groupRows.className = 'slot-group-rows';
+
+        for (const [grp, slots] of Object.entries(byGroup)) {
+          const checkId = `${course.id}-grp-${grp}`;
+          if (!(checkId in checkedState)) checkedState[checkId] = false;
+
+          const row = document.createElement('label');
+          row.className = 'slot-group-row';
+
+          const grpCb = document.createElement('input');
+          grpCb.type = 'checkbox';
+          grpCb.checked = checkedState[checkId];
+          grpCb.addEventListener('change', () => {
+            checkedState[checkId] = grpCb.checked;
+            lsSet(LS_CHECKED, checkedState);
+            updateModuleCheckbox(mod, cb);
+            refreshCalendar();
+          });
+
+          const dot2 = document.createElement('span');
+          dot2.className = 'course-color-dot';
+          dot2.style.background = eventColor(checkId, mod.category);
+
+          const grpLabel = document.createElement('span');
+          const slotSummary = slots.map(s => {
+            const parts = [];
+            if (s.day) parts.push(s.day.slice(0, 2).toUpperCase());
+            if (s.timeStart) parts.push(s.timeStart);
+            if (s.weekPattern) parts.push(`(${s.weekPattern})`);
+            return parts.join(' ');
+          }).join(', ');
+          grpLabel.textContent = `Slot ${grp}: ${slotSummary}`;
+
+          const colorBtn = document.createElement('button');
+          colorBtn.className = 'color-btn';
+          colorBtn.title = 'Farbe ändern';
+          colorBtn.textContent = '🎨';
+          colorBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openColorPicker(checkId, mod.category, dot2);
+          });
+
+          row.append(grpCb, dot2, grpLabel, colorBtn);
+          groupRows.appendChild(row);
+        }
+        courseDiv.appendChild(groupRows);
+      } else {
+        // Single checkbox for course
+        if (!(course.id in checkedState)) checkedState[course.id] = false;
+
+        const label = document.createElement('label');
+        label.className = 'course-label';
+
+        const courseCb = document.createElement('input');
+        courseCb.type = 'checkbox';
+        courseCb.checked = checkedState[course.id];
+        courseCb.addEventListener('change', () => {
+          checkedState[course.id] = courseCb.checked;
+          lsSet(LS_CHECKED, checkedState);
+          updateModuleCheckbox(mod, cb);
+          refreshCalendar();
+        });
+
+        const dot2 = document.createElement('span');
+        dot2.className = 'course-color-dot';
+        dot2.style.background = eventColor(course.id, mod.category);
+
+        const typeSpan = document.createElement('span');
+        typeSpan.className = 'course-type-badge';
+        typeSpan.textContent = course.type;
+
+        const titleSpan = document.createElement('span');
+        titleSpan.style.flex = '1';
+        titleSpan.textContent = course.title || '';
+
+        const colorBtn = document.createElement('button');
+        colorBtn.className = 'color-btn';
+        colorBtn.title = 'Farbe ändern';
+        colorBtn.textContent = '🎨';
+        colorBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openColorPicker(course.id, mod.category, dot2);
+        });
+
+        label.append(courseCb, dot2, typeSpan, titleSpan, colorBtn);
+        courseDiv.appendChild(label);
+      }
+      coursesDiv.appendChild(courseDiv);
+    }
+
+    entry.append(header, coursesDiv);
+    container.appendChild(entry);
+  }
+
+  renderCustomEventsList();
+}
+
+function isModuleChecked(mod) {
+  const ids = getModuleCheckIds(mod);
+  return ids.length > 0 && ids.every(id => checkedState[id]);
+}
+function isModuleIndeterminate(mod) {
+  const ids = getModuleCheckIds(mod);
+  const checked = ids.filter(id => checkedState[id]);
+  return checked.length > 0 && checked.length < ids.length;
+}
+function getModuleCheckIds(mod) {
+  const ids = [];
+  for (const c of mod.courses) {
+    if (c.hasMultipleSlotGroups) {
+      const groups = [...new Set(c.slots.map(s => s.slotGroup || '_'))];
+      for (const g of groups) ids.push(`${c.id}-grp-${g}`);
+    } else {
+      ids.push(c.id);
+    }
+  }
+  return ids;
+}
+function toggleModule(mod, checked) {
+  for (const id of getModuleCheckIds(mod)) {
+    checkedState[id] = checked;
+  }
+  lsSet(LS_CHECKED, checkedState);
+  renderSidebar();
+  refreshCalendar();
+}
+function updateModuleCheckbox(mod, cb) {
+  cb.checked = isModuleChecked(mod);
+  cb.indeterminate = isModuleIndeterminate(mod);
+}
+
+function renderCustomEventsList() {
+  const list = document.getElementById('custom-events-list');
+  list.innerHTML = '';
+  if (customEvents.length === 0) {
+    list.innerHTML = '<div style="font-size:11px;color:#aaa;padding:4px 0;">Keine eigenen Termine.</div>';
+    return;
+  }
+  for (const ev of customEvents) {
+    const row = document.createElement('div');
+    row.className = 'custom-event-row';
+
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = checkedState[ev.id] !== false;
+    cb.addEventListener('change', () => {
+      checkedState[ev.id] = cb.checked;
+      lsSet(LS_CHECKED, checkedState);
+      refreshCalendar();
+    });
+
+    const dot = document.createElement('span');
+    dot.className = 'course-color-dot';
+    dot.style.background = eventColor(ev.id, null) || ev.color;
+
+    const title = document.createElement('span');
+    title.style.flex = '1';
+    title.textContent = ev.title;
+
+    const actions = document.createElement('div');
+    actions.className = 'custom-event-actions';
+
+    const editBtn = document.createElement('button');
+    editBtn.textContent = '✏️';
+    editBtn.title = 'Bearbeiten';
+    editBtn.addEventListener('click', () => openCustomEventModal(ev.id));
+
+    const delBtn = document.createElement('button');
+    delBtn.textContent = '🗑️';
+    delBtn.title = 'Löschen';
+    delBtn.addEventListener('click', () => {
+      deleteCustomEvent(ev.id);
+    });
+
+    actions.append(editBtn, delBtn);
+    row.append(cb, dot, title, actions);
+    list.appendChild(row);
+  }
+}
+
+/* =====================================================================
+   COLOR PICKER (inline popover)
+   ===================================================================== */
+function openColorPicker(id, category, dotEl) {
+  const input = document.createElement('input');
+  input.type = 'color';
+  input.value = colorOverrides[id] || categoryColor(category || null);
+  input.style.cssText = 'position:fixed;opacity:0;pointer-events:none;';
+  document.body.appendChild(input);
+  input.click();
+  input.addEventListener('input', () => {
+    colorOverrides[id] = input.value;
+    lsSet(LS_COLORS, colorOverrides);
+    if (dotEl) dotEl.style.background = input.value;
+    // Update existing FC events
+    const fcEv = calendar.getEventById(id);
+    if (fcEv) {
+      fcEv.setProp('backgroundColor', input.value);
+      fcEv.setProp('borderColor', input.value);
+    }
+  });
+  input.addEventListener('blur', () => {
+    document.body.removeChild(input);
+    refreshCalendar();
+  });
+}
+
+/* =====================================================================
+   MODAL (Add / Edit custom event, also color override for parsed events)
+   ===================================================================== */
+let editingId = null;
+let colorResetDefault = null;
+
+function openModal(opts = {}) {
+  editingId = opts.id || null;
+  document.getElementById('modal-title').textContent = opts.title || 'Termin hinzufügen';
+  document.getElementById('f-title').value = opts.evTitle || '';
+  document.getElementById('f-day').value = opts.day || 'monday';
+  document.getElementById('f-start').value = opts.timeStart || '09:00';
+  document.getElementById('f-end').value = opts.timeEnd || '10:30';
+  document.getElementById('f-room').value = opts.room || '';
+  document.getElementById('f-notes').value = opts.notes || '';
+  document.getElementById('f-color').value = opts.color || '#3498db';
+  document.getElementById('modal-delete').style.display = opts.showDelete ? 'block' : 'none';
+  colorResetDefault = opts.defaultColor || null;
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('f-title').focus();
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  editingId = null;
+}
+
+function openCustomEventModal(id) {
+  if (!id) {
+    openModal({});
+    return;
+  }
+  const ev = customEvents.find(e => e.id === id);
+  if (!ev) return;
+  openModal({
+    id,
+    title: 'Termin bearbeiten',
+    evTitle: ev.title,
+    day: ev.day,
+    timeStart: ev.timeStart,
+    timeEnd: ev.timeEnd,
+    room: ev.room,
+    notes: ev.notes,
+    color: colorOverrides[id] || ev.color,
+    showDelete: true,
+    defaultColor: ev.color,
+  });
+}
+
+document.getElementById('modal-save').addEventListener('click', () => {
+  const titleVal = document.getElementById('f-title').value.trim();
+  if (!titleVal) { alert('Bitte Titel eingeben.'); return; }
+
+  const ev = {
+    id: editingId || `custom-${Date.now()}`,
+    title: titleVal,
+    day: document.getElementById('f-day').value,
+    timeStart: document.getElementById('f-start').value,
+    timeEnd: document.getElementById('f-end').value,
+    room: document.getElementById('f-room').value.trim(),
+    notes: document.getElementById('f-notes').value.trim(),
+    color: document.getElementById('f-color').value,
+  };
+
+  // Color override
+  colorOverrides[ev.id] = ev.color;
+  lsSet(LS_COLORS, colorOverrides);
+
+  if (editingId) {
+    const idx = customEvents.findIndex(e => e.id === editingId);
+    if (idx >= 0) customEvents[idx] = ev;
+  } else {
+    customEvents.push(ev);
+    checkedState[ev.id] = true;
+  }
+
+  lsSet(LS_CUSTOM, customEvents);
+  lsSet(LS_CHECKED, checkedState);
+  closeModal();
+  renderCustomEventsList();
+  refreshCalendar();
+});
+
+document.getElementById('modal-delete').addEventListener('click', () => {
+  if (editingId) {
+    deleteCustomEvent(editingId);
+    closeModal();
+  }
+});
+
+document.getElementById('modal-cancel').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+});
+
+document.getElementById('modal-color-reset').addEventListener('click', () => {
+  if (editingId) {
+    delete colorOverrides[editingId];
+    lsSet(LS_COLORS, colorOverrides);
+  }
+  const def = colorResetDefault || '#3498db';
+  document.getElementById('f-color').value = def;
+});
+
+function deleteCustomEvent(id) {
+  customEvents = customEvents.filter(e => e.id !== id);
+  delete checkedState[id];
+  delete colorOverrides[id];
+  lsSet(LS_CUSTOM, customEvents);
+  lsSet(LS_CHECKED, checkedState);
+  lsSet(LS_COLORS, colorOverrides);
+  renderCustomEventsList();
+  refreshCalendar();
+}
+
+/* =====================================================================
+   SELECT / DESELECT ALL
+   ===================================================================== */
+document.getElementById('btn-select-all').addEventListener('click', () => {
+  if (!coursesData) return;
+  for (const mod of coursesData.modules) {
+    for (const id of getModuleCheckIds(mod)) checkedState[id] = true;
+  }
+  for (const ev of customEvents) checkedState[ev.id] = true;
+  lsSet(LS_CHECKED, checkedState);
+  renderSidebar();
+  refreshCalendar();
+});
+
+document.getElementById('btn-deselect-all').addEventListener('click', () => {
+  if (!coursesData) return;
+  for (const mod of coursesData.modules) {
+    for (const id of getModuleCheckIds(mod)) checkedState[id] = false;
+  }
+  for (const ev of customEvents) checkedState[ev.id] = false;
+  lsSet(LS_CHECKED, checkedState);
+  renderSidebar();
+  refreshCalendar();
+});
+
+/* =====================================================================
+   A/B TOGGLE
+   ===================================================================== */
+document.getElementById('ab-group').addEventListener('click', (e) => {
+  if (!e.target.dataset.ab) return;
+  abMode = e.target.dataset.ab;
+  document.querySelectorAll('#ab-group button').forEach(b => {
+    b.classList.toggle('active', b.dataset.ab === abMode);
+  });
+  refreshCalendar();
+});
+
+/* =====================================================================
+   SIDEBAR TOGGLE
+   ===================================================================== */
+document.getElementById('btn-toggle-sidebar').addEventListener('click', () => {
+  document.getElementById('sidebar').classList.toggle('collapsed');
+});
+
+/* =====================================================================
+   ADD EVENT BUTTON
+   ===================================================================== */
+document.getElementById('add-event-btn').addEventListener('click', () => {
+  openModal({});
+});
+
+/* =====================================================================
+   OPTIMIZER
+   ===================================================================== */
+document.getElementById('optimizer-header').addEventListener('click', () => {
+  document.getElementById('optimizer').classList.toggle('open');
+  document.getElementById('optimizer-arrow').textContent =
+    document.getElementById('optimizer').classList.contains('open') ? '▲' : '▼';
+});
+
+document.getElementById('run-optimizer').addEventListener('click', runOptimizer);
+
+function getVisibleEvents() {
+  // All currently-shown parsed events (respects AB mode and checked state)
+  const events = [...buildParsedEvents(), ...buildCustomEvents()];
+  return events;
+}
+
+function timeToMinutes(t) {
+  if (!t) return null;
+  const [h, m] = t.split(':').map(Number);
+  return h * 60 + m;
+}
+
+function runOptimizer() {
+  const n = parseInt(document.getElementById('opt-n').value, 10) || 2;
+  const workStart = timeToMinutes(document.getElementById('opt-start').value);
+  const workEnd   = timeToMinutes(document.getElementById('opt-end').value);
+  const morningOk = document.getElementById('opt-morning-ok').checked;
+
+  const allDays = ['monday','tuesday','wednesday','thursday','friday'];
+  const combinations = getCombinations(allDays, Math.min(n, 5));
+
+  // Get all visible events with their day/time
+  const visEvents = getVisibleEvents().map(ev => {
+    // ev.start like '2026-01-05T09:15'
+    const date = ev.start.slice(0, 10);
+    const time = ev.start.slice(11, 16);
+    const endTime = ev.end ? ev.end.slice(11, 16) : null;
+    // Reverse-map date → day
+    const offset = (new Date(date) - new Date(REFERENCE_MONDAY)) / 86400000;
+    const day = allDays[offset];
+    return {
+      day,
+      startMin: timeToMinutes(time),
+      endMin: timeToMinutes(endTime),
+    };
+  });
+
+  function countConflicts(days) {
+    let conflicts = 0;
+    let nearMiss = 0;
+    for (const ev of visEvents) {
+      if (!days.includes(ev.day)) continue;
+      const s = ev.startMin;
+      const e = ev.endMin;
+      if (morningOk && e !== null && e <= workStart) continue;
+      if (morningOk && s >= workEnd) continue;
+      // Overlaps [workStart, workEnd]?
+      const overlaps = s < workEnd && (e === null || e > workStart);
+      if (overlaps) conflicts++;
+      else nearMiss++;
+    }
+    return { conflicts, nearMiss };
+  }
+
+  const results = combinations.map(days => {
+    const { conflicts, nearMiss } = countConflicts(days);
+    return { days, conflicts, nearMiss };
+  });
+  results.sort((a, b) => a.conflicts - b.conflicts || a.nearMiss - b.nearMiss);
+
+  renderOptimizerResults(results);
+}
+
+function getCombinations(arr, k) {
+  if (k === 0) return [[]];
+  if (arr.length === 0) return [];
+  const [head, ...tail] = arr;
+  const withHead = getCombinations(tail, k - 1).map(c => [head, ...c]);
+  const withoutHead = getCombinations(tail, k);
+  return [...withHead, ...withoutHead];
+}
+
+const DAY_DE = {
+  monday: 'Mo', tuesday: 'Di', wednesday: 'Mi', thursday: 'Do', friday: 'Fr',
+};
+
+const MAX_OPTIMIZER_RESULTS = 10;
+
+function renderOptimizerResults(results) {
+  const container = document.getElementById('opt-results');
+  container.innerHTML = '';
+  if (results.length === 0) {
+    container.textContent = 'Keine Ergebnisse.';
+    return;
+  }
+  const minConflicts = results[0].conflicts;
+  results.forEach((res, i) => {
+    const row = document.createElement('div');
+    row.className = 'opt-result-row' + (i === 0 ? ' opt-result-best' : '');
+
+    const daysStr = res.days.map(d => DAY_DE[d]).join(', ');
+    const days = document.createElement('span');
+    days.className = 'opt-result-days';
+    days.textContent = daysStr;
+
+    const conflicts = document.createElement('span');
+    conflicts.className = 'opt-result-conflicts';
+    conflicts.textContent = res.conflicts === 0
+      ? '✓ kein Konflikt'
+      : `${res.conflicts} Konflikt${res.conflicts > 1 ? 'e' : ''}`;
+
+    row.append(days, conflicts);
+    row.addEventListener('click', () => {
+      document.querySelectorAll('.opt-result-row').forEach(r => r.classList.remove('selected'));
+      row.classList.add('selected');
+      selectedWorkDays = res.days;
+      refreshCalendar();
+    });
+    container.appendChild(row);
+
+    if (i >= MAX_OPTIMIZER_RESULTS - 1) return;
+  });
+}
+
+/* =====================================================================
+   TOOLTIP
+   ===================================================================== */
+const tooltip = document.getElementById('fc-tooltip');
+
+function showTooltip(info) {
+  const props = info.event.extendedProps;
+  const lines = [];
+  if (props.moduleName) lines.push(`<b>${props.moduleName}</b>`);
+  if (props.moduleNumber) lines.push(`<span style="opacity:0.7">${props.moduleNumber}</span>`);
+  if (props.courseType) lines.push(`Typ: ${props.courseType}`);
+  if (props.room) lines.push(`📍 ${props.room}`);
+  if (props.slotGroup) lines.push(`Slot: ${props.slotGroup}`);
+  if (props.weekPattern) lines.push(`Woche: ${props.weekPattern}`);
+  if (props.lecturers && props.lecturers.length) lines.push(`👤 ${props.lecturers.join(', ')}`);
+  if (props.additionalInfo) lines.push(`ℹ️ ${props.additionalInfo}`);
+  if (props.notes) lines.push(`📝 ${props.notes}`);
+  if (props.isOnline) lines.push(`🌐 Online`);
+
+  tooltip.innerHTML = lines.join('<br>');
+  tooltip.classList.add('visible');
+}
+
+function moveTooltip(e) {
+  tooltip.style.left = (e.clientX + 14) + 'px';
+  tooltip.style.top  = (e.clientY + 14) + 'px';
+  // Keep within viewport
+  const rect = tooltip.getBoundingClientRect();
+  if (rect.right > window.innerWidth - 10) {
+    tooltip.style.left = (e.clientX - rect.width - 10) + 'px';
+  }
+  if (rect.bottom > window.innerHeight - 10) {
+    tooltip.style.top = (e.clientY - rect.height - 10) + 'px';
+  }
+}
+
+function hideTooltip() {
+  tooltip.classList.remove('visible');
+}
+
+document.addEventListener('mousemove', moveTooltip);
+
+/* =====================================================================
+   FULLCALENDAR INIT
+   ===================================================================== */
+function initCalendar() {
+  calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+    initialView: 'timeGridWeek',
+    initialDate: REFERENCE_MONDAY,
+    headerToolbar: false,           // hide navigation toolbar — fixed week
+    dayHeaderFormat: { weekday: 'long' },
+    hiddenDays: [0, 6],             // hide Sun & Sat
+    slotMinTime: '08:00:00',
+    slotMaxTime: '20:00:00',
+    slotDuration: '00:15:00',
+    slotLabelInterval: '01:00:00',
+    expandRows: true,
+    nowIndicator: false,
+    editable: false,
+    selectable: false,
+    height: '100%',
+    locale: 'de',
+    firstDay: 1,                    // Monday
+    validRange: {
+      start: REFERENCE_MONDAY,
+      end: '2026-01-11',            // Sunday of reference week
+    },
+    eventMouseEnter: showTooltip,
+    eventMouseLeave: hideTooltip,
+    eventClick: (info) => {
+      const props = info.event.extendedProps;
+      if (props.isCustom) {
+        openCustomEventModal(info.event.id);
+      }
+    },
+    events: [],
+  });
+  calendar.render();
+}
+
+/* =====================================================================
+   BOOTSTRAP
+   ===================================================================== */
+async function bootstrap() {
+  // Load persisted state
+  colorOverrides = lsGet(LS_COLORS, {});
+  customEvents   = lsGet(LS_CUSTOM, []);
+  checkedState   = lsGet(LS_CHECKED, {});
+  expandedState  = lsGet(LS_EXPANDED, {});
+
+  // Init calendar first (shows empty grid immediately)
+  initCalendar();
+
+  // Load courses.json
+  try {
+    const resp = await fetch('./courses.json');
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    coursesData = await resp.json();
+  } catch (err) {
+    document.getElementById('calendar-wrapper').insertAdjacentHTML('afterbegin',
+      `<div style="background:#fde;padding:10px;border-radius:4px;margin-bottom:8px;font-size:13px;">
+        ⚠️ Fehler beim Laden von courses.json: ${err.message}<br>
+        Bitte führe zuerst <code>python3 parse.py</code> aus und öffne die Seite über einen lokalen Server
+        (z.B. <code>python3 -m http.server 8000</code>).
+       </div>`);
+    return;
+  }
+
+  renderSidebar();
+  refreshCalendar();
+}
+
+document.addEventListener('DOMContentLoaded', bootstrap);
+</script>
+</body>
+</html>
