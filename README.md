@@ -4,6 +4,8 @@ visualize available courses in a weekly calender view
 
 link: https://nunq.github.io/courseview/
 
+<img src="./screenshot.png" width="80%"/>
+
 ## features
 - persists the selected courses in browser's localstorage
 - search across available courses
