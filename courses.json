@@ -1,0 +1,1932 @@
+{
+  "modules": [
+    {
+      "id": "10-201-2502",
+      "number": "10-201-2502",
+      "name": "Praktikum der IT-Sicherheit",
+      "category": "Kernmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-201-2502-Praktikum-0",
+          "type": "Praktikum",
+          "title": "der IT-Sicherheit",
+          "lecturers": [
+            "Buchmann, Erik",
+            "Roszeitis, Arne"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "ScaDS D03.05",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2104",
+      "number": "10-202-2104",
+      "name": "Neuromorphe Informationsverarbeitung",
+      "category": "Vertiefungsmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2104-Seminar-0",
+          "type": "Seminar",
+          "title": "Bioanaloge Systeme",
+          "lecturers": [
+            "Adama, Sophie",
+            "Bogdan, Martin"
+          ],
+          "additionalInfo": "findet am Ende des Semesters als Posterpräsentation vor dem Felix-Klein-Hörsaal statt.",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": "Vorraum FKH",
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-202-2104-Vorlesung-1",
+          "type": "Vorlesung",
+          "title": "Neurobionische Systeme",
+          "lecturers": [
+            "Bogdan, Martin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2104-Vorlesung-2",
+          "type": "Vorlesung",
+          "title": "Neuronal Computing",
+          "lecturers": [
+            "Bogdan, Martin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2112",
+      "number": "10-202-2112",
+      "name": "Komplexitätstheorie",
+      "category": "Kernmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2112-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Komplexitätstheorie",
+          "lecturers": [
+            "Lutz, Carsten"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2112-Übung-1",
+          "type": "Übung",
+          "title": "Komplexitätstheorie",
+          "lecturers": [
+            "Lutz, Carsten"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2129",
+      "number": "10-202-2129",
+      "name": "Mobile P2P Systeme und soziale Netzwerke",
+      "category": "Seminarmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2129-Seminar-0",
+          "type": "Seminar",
+          "title": "Mobile P2P Systeme und soziale Netzwerke",
+          "lecturers": [
+            "Lindemann, Christoph"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2130",
+      "number": "10-202-2130",
+      "name": "Ausgewählte Verfahren mobiler Peer-to-Peer Systeme",
+      "category": "Vertiefungsmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2130-Seminar-0",
+          "type": "Seminar",
+          "title": "Ausgewählte Verfahren mobiler Peer-to-Peer Systeme",
+          "lecturers": [
+            "Mehlhose, Frank Martin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2130-Praktikum-1",
+          "type": "Praktikum",
+          "title": "Ausgewählte Verfahren mobiler Peer-to-Peer Systeme",
+          "lecturers": [
+            "Schulze, Linus Curt"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2134",
+      "number": "10-202-2134",
+      "name": "Mainframe Internet Integration",
+      "category": "Kernmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2134-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Mainframe Internet Integration",
+          "lecturers": [
+            "Bogdan, Martin"
+          ],
+          "additionalInfo": "findet über moodle statt",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2138",
+      "number": "10-202-2138",
+      "name": "Künstliche Intelligenz im Gesundheitswesen",
+      "category": null,
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2138-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Künstliche Intelligenz im Gesundheitswesen",
+          "lecturers": [
+            "Adama, Sophie"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2138-Praktikum-1",
+          "type": "Praktikum",
+          "title": "Künstliche Intelligenz im Gesundheitswesen",
+          "lecturers": [
+            "Adama, Sophie"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2140",
+      "number": "10-202-2140",
+      "name": "Ausgewählte Verfahren und Techniken für Soziale Netzwerke",
+      "category": "Vertiefungsmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2140-Seminar-0",
+          "type": "Seminar",
+          "title": "Ausgewählte Verfahren und Techniken Sozialer Netzwerke",
+          "lecturers": [
+            "Schulze, Linus Curt"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2140-Praktikum-1",
+          "type": "Praktikum",
+          "title": "Ausgewählte Verfahren und Techniken Sozialer Netzwerke",
+          "lecturers": [
+            "Schulze, Linus Curt"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2204",
+      "number": "10-202-2204",
+      "name": "Medizinische Bildverarbeitung und bildgebende Verfahren in der Medizin",
+      "category": "Vertiefungsmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2204-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Computer Vision",
+          "lecturers": [
+            "Wiegreffe, Daniel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2204-Praktikum-1",
+          "type": "Praktikum",
+          "title": "Medizinische Bildverarbeitung",
+          "lecturers": [
+            "Meinecke, Christofer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Informatik-Pool A-414",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Informatik-Pool A-414",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2204-Vorlesung-2",
+          "type": "Vorlesung",
+          "title": "Medizinische Bildverarbeitung und bildgebende Verfahren in der Medizin",
+          "lecturers": [
+            "Wiegreffe, Daniel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2208",
+      "number": "10-202-2208",
+      "name": "Bioinformatik von RNA- und Proteinstrukturen",
+      "category": "Vertiefungsmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2208-Vorlesung_mit_integrierter_Übung-0",
+          "type": "Vorlesung mit integrierter Übung",
+          "title": "Bioinformatik von RNA- und Proteinstrukturen",
+          "lecturers": [
+            "Lorenz, Ronny",
+            "Schmidt, Maria"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:30",
+              "timeEnd": "13:30",
+              "room": "Härtelstraße 16-18, S 109",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2208-Praktikum-1",
+          "type": "Praktikum",
+          "title": "Bioinformatik von RNA- und Proteinstrukturen",
+          "lecturers": [
+            "Lorenz, Ronny",
+            "Prohaska, Sonja",
+            "Schmidt, Maria"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": "Härtelstraße 16-18, S 109",
+              "isBlockEvent": true,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2208-Vorlesung-2",
+          "type": "Vorlesung",
+          "title": "Interaktionen und Modifikation von RNAs und Proteinen",
+          "lecturers": [
+            "Prohaska, Sonja"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "14:00",
+              "timeEnd": "15:15",
+              "room": "Härtelstraße 16-18, S 109",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2218V",
+      "number": "10-202-2218V",
+      "name": "Grundlagen Komplexer Systeme (V)",
+      "category": "Kernmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2218V-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Algorithmen in Zellularautomaten",
+          "lecturers": [
+            "Wieseke, Nicolas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 15",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2218V-Vorlesung-1",
+          "type": "Vorlesung",
+          "title": "Diskrete Simulation",
+          "lecturers": [
+            "Middendorf, Martin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2218V-Vorlesung-2",
+          "type": "Vorlesung",
+          "title": "Verfahren der Schwarmintelligenz",
+          "lecturers": [
+            "Middendorf, Martin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2220",
+      "number": "10-202-2220",
+      "name": "Komplexe Systeme",
+      "category": "Vertiefungsmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2220-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Algorithmen in Zellularautomaten",
+          "lecturers": [
+            "Wieseke, Nicolas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 15",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2220-Vorlesung-1",
+          "type": "Vorlesung",
+          "title": "Diskrete Simulation",
+          "lecturers": [
+            "Middendorf, Martin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2220-Seminar-2",
+          "type": "Seminar",
+          "title": "Forschungsseminar Parallelverarbeitung und komplexe Systeme",
+          "lecturers": [
+            "Middendorf, Martin",
+            "Wieseke, Nicolas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2220-Vorlesung-3",
+          "type": "Vorlesung",
+          "title": "Verfahren der Schwarmintelligenz",
+          "lecturers": [
+            "Middendorf, Martin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2312",
+      "number": "10-202-2312",
+      "name": "Angewandte Informatik",
+      "category": "Kernmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2312-Seminar-0",
+          "type": "Seminar",
+          "title": "Prompt Engineering",
+          "lecturers": [
+            "Mailach, Alina"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2346",
+      "number": "10-202-2346",
+      "name": "Automated Software Engineering",
+      "category": "Vertiefungsmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2346-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Advanced Software Engineering",
+          "lecturers": [
+            "Siegmund, Norbert"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2346-Übung-1",
+          "type": "Übung",
+          "title": "Advanced Software Engineering",
+          "lecturers": [
+            "Wittig, Annemarie"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2346-Seminar-2",
+          "type": "Seminar",
+          "title": "Automated Software Engineering",
+          "lecturers": [
+            "Siegmund, Norbert"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2347",
+      "number": "10-202-2347",
+      "name": "Einzelthemen der Syntaktischen Analyse und Übersetzung",
+      "category": "Kernmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2347-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Syntaktische Analyse",
+          "lecturers": [
+            "Maletti, Andreas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2347-Übung-1",
+          "type": "Übung",
+          "title": "Syntaktische Analyse",
+          "lecturers": [
+            "Maletti, Andreas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2347-Praktikum-2",
+          "type": "Praktikum",
+          "title": "Syntaktische Analyse",
+          "lecturers": [
+            "Maletti, Andreas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2348",
+      "number": "10-202-2348",
+      "name": "Theoretische Informatik",
+      "category": "Seminarmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2348-Seminar-0",
+          "type": "Seminar",
+          "title": "Graph Neural Networks",
+          "lecturers": [
+            "Lutz, Carsten"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2349",
+      "number": "10-202-2349",
+      "name": "Grundlagen Komplexer Systeme",
+      "category": "Seminarmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2349-Seminar-0",
+          "type": "Seminar",
+          "title": "Masterseminar Schwarmintelligenz",
+          "lecturers": [
+            "Middendorf, Martin",
+            "Wieseke, Nicolas"
+          ],
+          "additionalInfo": "optional Teilname als Zuhörer per BBB",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2350",
+      "number": "10-202-2350",
+      "name": "Grundlagen des Automated Software Engineerings",
+      "category": "Kernmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-202-2350-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Advanced Software Engineering",
+          "lecturers": [
+            "Siegmund, Norbert"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2350-Übung-1",
+          "type": "Übung",
+          "title": "Advanced Software Engineering",
+          "lecturers": [
+            "Wittig, Annemarie"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-DIH-1003",
+      "number": "10-DIH-1003",
+      "name": "Computational Spatial Humanities",
+      "category": "Ergänzungsbereich",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-DIH-1003-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Computational Spatial Humanities",
+          "lecturers": [
+            "Efer, Thomas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-DIH-1003-Seminar-1",
+          "type": "Seminar",
+          "title": "Computational Spatial Humanities",
+          "lecturers": [
+            "Efer, Thomas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-INF-BI04",
+      "number": "10-INF-BI04",
+      "name": "Fortgeschrittene Methoden in der Bioinformatik",
+      "category": "Vertiefungsmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-INF-BI04-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Fortgeschrittene Methoden der Bioinformatik",
+          "lecturers": [
+            "Gatter, Thomas",
+            "Stadler, Peter F."
+          ],
+          "additionalInfo": "7 Termine – 13.4. (15-17 Uhr), 15.4. (13-15 Uhr), 17.4., 20.4., 22.4., 24.4. und 27.4.\n                                                         - jeweils 14:00-17:00",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": "Härtelstraße 16-18, S 109",
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-INF-BI04-Praktikum-1",
+          "type": "Praktikum",
+          "title": "Fortgeschrittene Methoden der Bioinformatik",
+          "lecturers": [
+            "Gatter, Thomas",
+            "Stadler, Peter F."
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-INF-DS105",
+      "number": "10-INF-DS105",
+      "name": "Datenschutz von Anonymisierung bis Zweckbindung",
+      "category": "Kernmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-INF-DS105-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Datenschutz von Anonymisierung bis Zweckbindung",
+          "lecturers": [
+            "Buchmann, Erik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Hs 4",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-INF-DS105-Übung-1",
+          "type": "Übung",
+          "title": "Datenschutz von Anonymisierung bis Zweckbindung",
+          "lecturers": [
+            "Buchmann, Erik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "friday",
+              "weekPattern": "A",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "friday",
+              "weekPattern": "B",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-INF-DS108",
+      "number": "10-INF-DS108",
+      "name": "Aktuelle Datenschutzverfahren aus der Forschung",
+      "category": "Seminarmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-INF-DS108-Seminar-0",
+          "type": "Seminar",
+          "title": "Aktuelle Datenschutzverfahren aus der Forschung",
+          "lecturers": [
+            "Buchmann, Erik",
+            "Freiberger, Vincent William Benedict"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM002",
+      "number": "10-MAT-BM002",
+      "name": "Analysis 2 [für B.Sc. Mathe]",
+      "category": "Ergänzungsbereich",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-MAT-BM002-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Analysis 2",
+          "lecturers": [
+            "Hirsch, Jonas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM002-Übung-1",
+          "type": "Übung",
+          "title": "Analysis 2",
+          "lecturers": [
+            "Kliem, Sandra"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM002-Übung-2",
+          "type": "Übung",
+          "title": "Hörsaalübung Analysis 2",
+          "lecturers": [
+            "Neubert, Marius"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "Hs 2",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM004",
+      "number": "10-MAT-BM004",
+      "name": "Lineare Algebra 2",
+      "category": "Ergänzungsbereich",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-MAT-BM004-Übung-0",
+          "type": "Übung",
+          "title": "Hörsaalübung Lineare Algebra 2",
+          "lecturers": [
+            "Zimmermann, Konrad"
+          ],
+          "additionalInfo": "Die Hörsaalübung ist für das Lehramt eine fakultative Zusatzveranstaltung",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM004-Vorlesung-1",
+          "type": "Vorlesung",
+          "title": "Lineare Algebra 2",
+          "lecturers": [
+            "Grabowski, Łukasz"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 3",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM004-Übung-2",
+          "type": "Übung",
+          "title": "Lineare Algebra 2",
+          "lecturers": [
+            "Zimmermann, Konrad"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMI-26S01",
+      "number": "FMI-26S01",
+      "name": "Computergestützte Toxikologie",
+      "category": "Ergänzungsbereich",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "FMI-26S01-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Computergestützte Toxikologie",
+          "lecturers": [
+            "Hackermüller, Jörg"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": "A",
+              "timeStart": "09:00",
+              "timeEnd": "12:00",
+              "room": "Härtelstraße 16-18, S 109",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "FMI-26S01-Seminar-1",
+          "type": "Seminar",
+          "title": "Computergestützte Toxikologie",
+          "lecturers": [
+            "Hackermüller, Jörg"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": "B",
+              "timeStart": "09:00",
+              "timeEnd": "12:00",
+              "room": "Härtelstraße 16-18, S 109",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMI-26S02",
+      "number": "FMI-26S02",
+      "name": "Current Topics in Natural Language Processing",
+      "category": "Seminarmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "FMI-26S02-Seminar-0",
+          "type": "Seminar",
+          "title": "Massively Multilingual Language Models",
+          "lecturers": [
+            "Weißweiler, Leonie"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMI-26S06",
+      "number": "FMI-26S06",
+      "name": "Reaction Network Theory",
+      "category": null,
+      "semester": 2,
+      "courses": [
+        {
+          "id": "FMI-26S06-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Reaction Network Theory",
+          "lecturers": [
+            "Vassena, Nicola"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 1-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "FMI-26S06-Seminar-1",
+          "type": "Seminar",
+          "title": "Reaction Network Theory",
+          "lecturers": [
+            "Vassena, Nicola"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 1-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMI-26S07",
+      "number": "FMI-26S07",
+      "name": "Daten wirkungsvoll erzählen – Storytelling mit Daten",
+      "category": "Kernmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "FMI-26S07-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Daten wirkungsvoll erzählen – Storytelling mit Daten",
+          "lecturers": [
+            "Schor, Jana"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:00",
+              "timeEnd": "10:30",
+              "room": "Härtelstraße 16-18, S 110",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "FMI-26S07-Übung-1",
+          "type": "Übung",
+          "title": "Daten wirkungsvoll erzählen – Storytelling mit Daten",
+          "lecturers": [
+            "Schor, Jana"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "10:30",
+              "timeEnd": "12:00",
+              "room": "Härtelstraße 16-18, S 110",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2011",
+      "number": "10-202-2011",
+      "name": "Masterseminar Informatik",
+      "category": "Pflichtmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-202-2011-Seminar-0",
+          "type": "Seminar",
+          "title": "Bachelor- und Masterseminar Algebraische und Logische Grundlagen der Informatik",
+          "lecturers": [
+            "Maletti, Andreas"
+          ],
+          "additionalInfo": "nach Vereinbarung",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-202-2011-Seminar-1",
+          "type": "Seminar",
+          "title": "Bachelor- und Masterseminar Bioinformatik",
+          "lecturers": [
+            "Stadler, Peter F."
+          ],
+          "additionalInfo": "Präsentation möglich sofern eine Bachelor- bzw. Masterarbeit an der Professur für\n                                                         Bioinformatik angefertigt wird",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": "Härtelstraße 16-18, S 109",
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-202-2011-Seminar-2",
+          "type": "Seminar",
+          "title": "Bachelor- und Masterseminar Digital Humanities",
+          "lecturers": [
+            "Burghardt, Manuel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2011-Seminar-3",
+          "type": "Seminar",
+          "title": "Bachelor- und Masterseminar Grundlagen der Wissensrepräsentation",
+          "lecturers": [
+            "Lutz, Carsten"
+          ],
+          "additionalInfo": "nach Vereinbarung",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-202-2011-Seminar-4",
+          "type": "Seminar",
+          "title": "Bachelor- und Masterseminar Neuromorphe Informationsverarbeitung",
+          "lecturers": [
+            "Bogdan, Martin"
+          ],
+          "additionalInfo": "nach Vereinbarung",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-202-2011-Seminar-5",
+          "type": "Seminar",
+          "title": "Forschungs-, Bachelor- und Masterseminar BSV",
+          "lecturers": [
+            "Scheuermann, Gerik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2011-Seminar-6",
+          "type": "Seminar",
+          "title": "Masterseminar Schwarmintelligenz",
+          "lecturers": [
+            "Middendorf, Martin",
+            "Wieseke, Nicolas"
+          ],
+          "additionalInfo": "optional Teilname als Zuhörer per BBB",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-202-2011-Seminar-7",
+          "type": "Seminar",
+          "title": "Master- und Doktorandenseminar RVS",
+          "lecturers": [
+            "Lindemann, Christoph"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-202-2202",
+      "number": "10-202-2202",
+      "name": "Seminar Visualisierung",
+      "category": "Seminarmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-202-2202-Seminar-0",
+          "type": "Seminar",
+          "title": "Visualisierung",
+          "lecturers": [
+            "Scheuermann, Gerik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-INF-DS501",
+      "number": "10-INF-DS501",
+      "name": "Advanced Deep Learning",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-INF-DS501-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Advanced Deep Learning",
+          "lecturers": [
+            "Scherf, Nico"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "MPI für Kognitions- und Neurowissenschaften, Stephanstraße 1a, gr. Hs",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-INF-DS501-Seminar-1",
+          "type": "Seminar",
+          "title": "Advanced Deep Learning",
+          "lecturers": [
+            "Scherf, Nico"
+          ],
+          "additionalInfo": "Das Seminar wird diesmal vermutlich als Blockveranstaltung angeboten. Dies wird direkt\n                                                         mit den Studierenden besprochen.",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "MPI für Kognitions- und Neurowissenschaften, Stephanstraße 1a, gr. Hs",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
