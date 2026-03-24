@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modulplan Master Informatik</title>
+<title>Course Planner</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E&#x1F4C5;%3C/text%3E%3C/svg%3E">
 
 <!-- FullCalendar v6 -->
 <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
@@ -34,7 +35,24 @@ body {
   flex-shrink: 0;
   z-index: 100;
 }
-#topbar h1 { font-size: 16px; font-weight: 600; flex: 1; }
+#topbar h1 { font-size: 16px; font-weight: 600; }
+#dataset-select {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  max-width: 220px;
+}
+#dataset-select option { background: #2c3e50; color: #fff; }
+#generated-label {
+  font-size: 11px;
+  opacity: 0.55;
+  white-space: nowrap;
+  flex: 1;
+}
 #topbar button {
   background: rgba(255,255,255,0.15);
   border: none;
@@ -66,6 +84,7 @@ body {
   flex: 1;
   overflow: hidden;
   min-height: 0;
+  position: relative;
 }
 
 /* ===== SIDEBAR ===== */
@@ -96,13 +115,15 @@ body {
   background: #fff;
   border: 1px solid #e0e0e0;
   border-left: none;
-  border-radius: 0 4px 4px 0;
-  padding: 8px 4px;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 5px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 13px;
   transition: left 0.2s;
   line-height: 1;
+  color: #666;
 }
+#sidebar-toggle:hover { background: #f0f2f5; color: #333; }
 #sidebar.collapsed ~ #sidebar-toggle { left: 0; }
 
 /* sidebar sections */
@@ -130,6 +151,24 @@ body {
   color: #555;
 }
 .sidebar-global-actions button:hover { background: #f0f0f0; }
+
+/* legend */
+.hidden { display: none !important; }
+#legend-body { padding: 4px 2px 2px; }
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #555;
+  padding: 2px 0;
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 
 /* module entries */
 .module-entry { border: 1px solid #e8e8e8; border-radius: 4px; margin-bottom: 6px; overflow: hidden; }
@@ -368,6 +407,12 @@ body {
 }
 #fc-tooltip.visible { display: block; }
 
+@keyframes highlightPulse {
+  0%   { box-shadow: inset 0 0 0 2px #3498db, 0 0 0 3px rgba(52,152,219,0.4); background: rgba(52,152,219,0.18); }
+  100% { box-shadow: none; background: transparent; }
+}
+.module-highlight { animation: highlightPulse 1.2s ease-out forwards; }
+
 /* FullCalendar overrides */
 .fc .fc-toolbar-title { font-size: 14px; }
 .fc .fc-event { cursor: pointer; font-size: 11px; }
@@ -384,16 +429,17 @@ body {
 
 <!-- Top bar -->
 <div id="topbar">
-  <h1>📅 Modulplan – Master Informatik SS 2026</h1>
-  <span style="font-size:12px;opacity:0.7">Wochenmuster:</span>
+  <h1>📅 Course Planner</h1>
+  <select id="dataset-select"></select>
+  <span id="generated-label"></span>
+  <span style="font-size:12px;opacity:0.7">Week pattern:</span>
   <div id="ab-group">
     <button data-ab="both" class="active">A+B</button>
-    <button data-ab="A">Nur A</button>
-    <button data-ab="B">Nur B</button>
+    <button data-ab="A">Only A</button>
+    <button data-ab="B">Only B</button>
   </div>
-  <button id="btn-select-all">Alle ✓</button>
-  <button id="btn-deselect-all">Alle ✗</button>
-  <button id="btn-toggle-sidebar">◀ Sidebar</button>
+  <button id="btn-select-all">Select All Modules</button>
+  <button id="btn-deselect-all">Select None</button>
 </div>
 
 <!-- Main layout -->
@@ -401,46 +447,65 @@ body {
   <!-- Sidebar -->
   <div id="sidebar">
     <div id="sidebar-inner">
+      <!-- Legend -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title" id="legend-title" style="cursor:pointer;" onclick="document.getElementById('legend-body').classList.toggle('hidden')">
+          <span>Legend</span>
+          <span id="legend-arrow" style="font-size:10px;color:#aaa;">▼</span>
+        </div>
+        <div id="legend-body">
+          <div class="legend-item"><span class="legend-dot" style="background:#2980b9"></span>Kernmodul</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#16a085"></span>Vertiefungsmodul</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#27ae60"></span>Seminarmodul</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#e67e22"></span>Ergänzungsbereich</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#8e44ad"></span>Pflichtmodul</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#7f8c8d"></span>Other</div>
+        </div>
+      </div>
+
       <!-- Parsed modules -->
       <div class="sidebar-section">
-        <div class="sidebar-section-title">Module</div>
+        <div class="sidebar-section-title">Modules</div>
+        <input type="search" id="module-search" placeholder="Search modules…" style="width:100%;padding:4px 8px;border:1px solid #ddd;border-radius:4px;font-size:12px;margin:5px 0 4px;box-sizing:border-box;">
         <div id="module-list"></div>
       </div>
 
       <!-- Custom events -->
       <div class="sidebar-section">
-        <div class="sidebar-section-title">Eigene Termine</div>
+        <div class="sidebar-section-title">Custom Events</div>
         <div id="custom-events-list"></div>
-        <button id="add-event-btn">+ Termin hinzufügen</button>
+        <button id="add-event-btn">+ Add Event</button>
       </div>
     </div>
 
     <!-- Work Day Optimizer -->
     <div id="optimizer">
       <div id="optimizer-header">
-        <span>⚡ Arbeitstag-Optimierer</span>
+        <span>⚡ Work Day Optimizer</span>
         <span id="optimizer-arrow">▼</span>
       </div>
       <div id="optimizer-body">
         <div class="opt-row">
-          <label>Arbeitstage pro Woche:</label>
+          <label>Working days per week:</label>
           <input type="number" id="opt-n" value="2" min="1" max="5">
         </div>
         <div class="opt-row">
-          <label>Arbeitszeit:</label>
+          <label>Core Working hours:</label>
           <input type="time" id="opt-start" value="11:00">
           <span>–</span>
           <input type="time" id="opt-end" value="15:00">
         </div>
         <div class="opt-row">
           <input type="checkbox" id="opt-morning-ok">
-          <label for="opt-morning-ok">Frühe Termine (vor Arbeitsbeginn) OK</label>
+          <label for="opt-morning-ok">Early lectures (before work starts) are OK</label>
         </div>
-        <button id="run-optimizer">Optimieren</button>
+        <button id="run-optimizer">Optimize</button>
         <div id="opt-results"></div>
       </div>
     </div>
   </div>
+
+  <button id="sidebar-toggle" title="Toggle sidebar">◀</button>
 
   <!-- Calendar -->
   <div id="calendar-wrapper">
@@ -451,49 +516,49 @@ body {
 <!-- Modal -->
 <div id="modal-overlay">
   <div id="modal">
-    <h2 id="modal-title">Termin hinzufügen</h2>
+    <h2 id="modal-title">Add Event</h2>
     <div class="form-row">
-      <label>Titel *</label>
-      <input type="text" id="f-title" placeholder="Titel des Termins">
+      <label>Title *</label>
+      <input type="text" id="f-title" placeholder="Event title">
     </div>
     <div class="form-row">
-      <label>Wochentag</label>
+      <label>Day of week</label>
       <select id="f-day">
-        <option value="monday">Montag</option>
-        <option value="tuesday">Dienstag</option>
-        <option value="wednesday">Mittwoch</option>
-        <option value="thursday">Donnerstag</option>
-        <option value="friday">Freitag</option>
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
       </select>
     </div>
     <div class="form-row" style="display:flex;gap:8px;">
       <div style="flex:1">
-        <label>Beginn</label>
+        <label>Start</label>
         <input type="time" id="f-start" value="09:00">
       </div>
       <div style="flex:1">
-        <label>Ende</label>
+        <label>End</label>
         <input type="time" id="f-end" value="10:30">
       </div>
     </div>
     <div class="form-row">
-      <label>Raum / Ort</label>
+      <label>Room / Location</label>
       <input type="text" id="f-room" placeholder="optional">
     </div>
     <div class="form-row">
-      <label>Notizen</label>
+      <label>Notes</label>
       <textarea id="f-notes" placeholder="optional"></textarea>
     </div>
     <div class="form-row">
-      <label>Farbe
-        <span id="modal-color-reset" title="Farbe zurücksetzen">Zurücksetzen</span>
+      <label>Color
+        <span id="modal-color-reset" title="Reset color">Reset</span>
       </label>
       <input type="color" id="f-color" value="#3498db">
     </div>
     <div class="modal-actions">
-      <button id="modal-save">Speichern</button>
-      <button id="modal-delete">Löschen</button>
-      <button id="modal-cancel">Abbrechen</button>
+      <button id="modal-save">Save</button>
+      <button id="modal-delete">Delete</button>
+      <button id="modal-cancel">Cancel</button>
     </div>
   </div>
 </div>
@@ -521,22 +586,27 @@ const DAY_OFFSETS = {
   monday: 0, tuesday: 1, wednesday: 2, thursday: 3, friday: 4,
 };
 
-const LS_CUSTOM   = 'modulplan_custom_events';
-const LS_COLORS   = 'modulplan_colors';
-const LS_CHECKED  = 'modulplan_checked';
-const LS_EXPANDED = 'modulplan_expanded';
+const LS_CUSTOM   = 'modulplan_custom_events';  // global (not per-dataset)
+const LS_COLORS   = 'modulplan_colors';           // namespaced per dataset via dsKey()
+const LS_CHECKED  = 'modulplan_checked';          // namespaced per dataset via dsKey()
+const LS_EXPANDED = 'modulplan_expanded';         // namespaced per dataset via dsKey()
 
 /* =====================================================================
    STATE
    ===================================================================== */
 let calendar = null;
 let coursesData = null;       // { modules: [...] }
+let currentDatasetUrl = '';   // URL of the currently loaded dataset
 let abMode = 'both';          // 'A' | 'B' | 'both'
-let colorOverrides = {};      // id → hex color string
-let customEvents = [];        // array of custom event objects
-let checkedState = {};        // id → bool
-let expandedState = {};       // moduleId → bool
+let colorOverrides = {};      // id → hex color string  (per-dataset)
+let customEvents = [];        // array of custom event objects  (global)
+let checkedState = {};        // id → bool  (per-dataset)
+let expandedState = {};       // moduleId → bool  (per-dataset)
 let selectedWorkDays = null;  // array of day names for bg shading
+let moduleSearchQuery = '';   // current sidebar search text
+
+// Returns a localStorage key scoped to the currently loaded dataset.
+function dsKey(base) { return base + ':' + currentDatasetUrl; }
 
 /* ===== LocalStorage helpers ===== */
 function lsGet(key, fallback) {
@@ -573,8 +643,9 @@ function lighten(hex, amount = 0.5) {
 function dateForDay(dayName) {
   const offset = DAY_OFFSETS[dayName];
   if (offset === undefined) return null;
-  const d = new Date(REFERENCE_MONDAY + 'T00:00:00');
-  d.setDate(d.getDate() + offset);
+  // Parse as UTC to avoid timezone shifting (toISOString always returns UTC)
+  const d = new Date(REFERENCE_MONDAY + 'T00:00:00Z');
+  d.setUTCDate(d.getUTCDate() + offset);
   return d.toISOString().slice(0, 10);
 }
 
@@ -754,6 +825,13 @@ function renderSidebar() {
   container.innerHTML = '';
 
   for (const mod of coursesData.modules) {
+    // Filter by search query
+    if (moduleSearchQuery &&
+        !mod.name.toLowerCase().includes(moduleSearchQuery) &&
+        !mod.number.toLowerCase().includes(moduleSearchQuery)) {
+      continue;
+    }
+
     const entry = document.createElement('div');
     entry.className = 'module-entry' + (expandedState[mod.id] ? ' expanded' : '');
 
@@ -796,7 +874,7 @@ function renderSidebar() {
     header.append(cb, dot, num, name, semBadge, expandIcon);
     header.addEventListener('click', () => {
       expandedState[mod.id] = !expandedState[mod.id];
-      lsSet(LS_EXPANDED, expandedState);
+      lsSet(dsKey(LS_EXPANDED), expandedState);
       entry.classList.toggle('expanded', expandedState[mod.id]);
       expandIcon.textContent = expandedState[mod.id] ? '▲' : '▼';
     });
@@ -838,7 +916,7 @@ function renderSidebar() {
           grpCb.checked = checkedState[checkId];
           grpCb.addEventListener('change', () => {
             checkedState[checkId] = grpCb.checked;
-            lsSet(LS_CHECKED, checkedState);
+            lsSet(dsKey(LS_CHECKED), checkedState);
             updateModuleCheckbox(mod, cb);
             refreshCalendar();
           });
@@ -850,7 +928,7 @@ function renderSidebar() {
           const grpLabel = document.createElement('span');
           const slotSummary = slots.map(s => {
             const parts = [];
-            if (s.day) parts.push(s.day.slice(0, 2).toUpperCase());
+            if (s.day) parts.push(s.day[0].toUpperCase() + s.day.slice(1, 3));
             if (s.timeStart) parts.push(s.timeStart);
             if (s.weekPattern) parts.push(`(${s.weekPattern})`);
             return parts.join(' ');
@@ -859,7 +937,7 @@ function renderSidebar() {
 
           const colorBtn = document.createElement('button');
           colorBtn.className = 'color-btn';
-          colorBtn.title = 'Farbe ändern';
+          colorBtn.title = 'Change color';
           colorBtn.textContent = '🎨';
           colorBtn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -882,7 +960,7 @@ function renderSidebar() {
         courseCb.checked = checkedState[course.id];
         courseCb.addEventListener('change', () => {
           checkedState[course.id] = courseCb.checked;
-          lsSet(LS_CHECKED, checkedState);
+          lsSet(dsKey(LS_CHECKED), checkedState);
           updateModuleCheckbox(mod, cb);
           refreshCalendar();
         });
@@ -901,7 +979,7 @@ function renderSidebar() {
 
         const colorBtn = document.createElement('button');
         colorBtn.className = 'color-btn';
-        colorBtn.title = 'Farbe ändern';
+        colorBtn.title = 'Change color';
         colorBtn.textContent = '🎨';
         colorBtn.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -914,6 +992,7 @@ function renderSidebar() {
       coursesDiv.appendChild(courseDiv);
     }
 
+    entry.dataset.moduleId = mod.id;
     entry.append(header, coursesDiv);
     container.appendChild(entry);
   }
@@ -946,7 +1025,7 @@ function toggleModule(mod, checked) {
   for (const id of getModuleCheckIds(mod)) {
     checkedState[id] = checked;
   }
-  lsSet(LS_CHECKED, checkedState);
+  lsSet(dsKey(LS_CHECKED), checkedState);
   renderSidebar();
   refreshCalendar();
 }
@@ -959,7 +1038,7 @@ function renderCustomEventsList() {
   const list = document.getElementById('custom-events-list');
   list.innerHTML = '';
   if (customEvents.length === 0) {
-    list.innerHTML = '<div style="font-size:11px;color:#aaa;padding:4px 0;">Keine eigenen Termine.</div>';
+    list.innerHTML = '<div style="font-size:11px;color:#aaa;padding:4px 0;">No custom events.</div>';
     return;
   }
   for (const ev of customEvents) {
@@ -971,7 +1050,7 @@ function renderCustomEventsList() {
     cb.checked = checkedState[ev.id] !== false;
     cb.addEventListener('change', () => {
       checkedState[ev.id] = cb.checked;
-      lsSet(LS_CHECKED, checkedState);
+      lsSet(dsKey(LS_CHECKED), checkedState);
       refreshCalendar();
     });
 
@@ -988,12 +1067,12 @@ function renderCustomEventsList() {
 
     const editBtn = document.createElement('button');
     editBtn.textContent = '✏️';
-    editBtn.title = 'Bearbeiten';
+    editBtn.title = 'Edit';
     editBtn.addEventListener('click', () => openCustomEventModal(ev.id));
 
     const delBtn = document.createElement('button');
     delBtn.textContent = '🗑️';
-    delBtn.title = 'Löschen';
+    delBtn.title = 'Delete';
     delBtn.addEventListener('click', () => {
       deleteCustomEvent(ev.id);
     });
@@ -1016,7 +1095,7 @@ function openColorPicker(id, category, dotEl) {
   input.click();
   input.addEventListener('input', () => {
     colorOverrides[id] = input.value;
-    lsSet(LS_COLORS, colorOverrides);
+    lsSet(dsKey(LS_COLORS), colorOverrides);
     if (dotEl) dotEl.style.background = input.value;
     // Update existing FC events
     const fcEv = calendar.getEventById(id);
@@ -1039,7 +1118,7 @@ let colorResetDefault = null;
 
 function openModal(opts = {}) {
   editingId = opts.id || null;
-  document.getElementById('modal-title').textContent = opts.title || 'Termin hinzufügen';
+  document.getElementById('modal-title').textContent = opts.title || 'Add Event';
   document.getElementById('f-title').value = opts.evTitle || '';
   document.getElementById('f-day').value = opts.day || 'monday';
   document.getElementById('f-start').value = opts.timeStart || '09:00';
@@ -1067,7 +1146,7 @@ function openCustomEventModal(id) {
   if (!ev) return;
   openModal({
     id,
-    title: 'Termin bearbeiten',
+    title: 'Edit Event',
     evTitle: ev.title,
     day: ev.day,
     timeStart: ev.timeStart,
@@ -1082,7 +1161,7 @@ function openCustomEventModal(id) {
 
 document.getElementById('modal-save').addEventListener('click', () => {
   const titleVal = document.getElementById('f-title').value.trim();
-  if (!titleVal) { alert('Bitte Titel eingeben.'); return; }
+  if (!titleVal) { alert('Please enter a title.'); return; }
 
   const ev = {
     id: editingId || `custom-${Date.now()}`,
@@ -1097,7 +1176,7 @@ document.getElementById('modal-save').addEventListener('click', () => {
 
   // Color override
   colorOverrides[ev.id] = ev.color;
-  lsSet(LS_COLORS, colorOverrides);
+  lsSet(dsKey(LS_COLORS), colorOverrides);
 
   if (editingId) {
     const idx = customEvents.findIndex(e => e.id === editingId);
@@ -1108,7 +1187,7 @@ document.getElementById('modal-save').addEventListener('click', () => {
   }
 
   lsSet(LS_CUSTOM, customEvents);
-  lsSet(LS_CHECKED, checkedState);
+  lsSet(dsKey(LS_CHECKED), checkedState);
   closeModal();
   renderCustomEventsList();
   refreshCalendar();
@@ -1129,7 +1208,7 @@ document.getElementById('modal-overlay').addEventListener('click', (e) => {
 document.getElementById('modal-color-reset').addEventListener('click', () => {
   if (editingId) {
     delete colorOverrides[editingId];
-    lsSet(LS_COLORS, colorOverrides);
+    lsSet(dsKey(LS_COLORS), colorOverrides);
   }
   const def = colorResetDefault || '#3498db';
   document.getElementById('f-color').value = def;
@@ -1140,11 +1219,42 @@ function deleteCustomEvent(id) {
   delete checkedState[id];
   delete colorOverrides[id];
   lsSet(LS_CUSTOM, customEvents);
-  lsSet(LS_CHECKED, checkedState);
-  lsSet(LS_COLORS, colorOverrides);
+  lsSet(dsKey(LS_CHECKED), checkedState);
+  lsSet(dsKey(LS_COLORS), colorOverrides);
   renderCustomEventsList();
   refreshCalendar();
 }
+
+/* =====================================================================
+   MODULE HIGHLIGHT
+   ===================================================================== */
+function highlightModuleInSidebar(moduleId) {
+  if (!moduleId) return;
+  const entry = document.querySelector(`.module-entry[data-module-id="${CSS.escape(moduleId)}"]`);
+  if (!entry) return;
+  // Expand if collapsed
+  if (!expandedState[moduleId]) {
+    expandedState[moduleId] = true;
+    lsSet(dsKey(LS_EXPANDED), expandedState);
+    entry.classList.add('expanded');
+    const icon = entry.querySelector('.module-expand-icon');
+    if (icon) icon.textContent = '\u25b2';
+  }
+  // Scroll into view
+  entry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  // Flash highlight (restart animation by removing then re-adding class)
+  entry.classList.remove('module-highlight');
+  void entry.offsetWidth; // force reflow
+  entry.classList.add('module-highlight');
+}
+
+/* =====================================================================
+   SEARCH BAR
+   ===================================================================== */
+document.getElementById('module-search').addEventListener('input', (e) => {
+  moduleSearchQuery = e.target.value.toLowerCase().trim();
+  renderSidebar();
+});
 
 /* =====================================================================
    SELECT / DESELECT ALL
@@ -1155,7 +1265,7 @@ document.getElementById('btn-select-all').addEventListener('click', () => {
     for (const id of getModuleCheckIds(mod)) checkedState[id] = true;
   }
   for (const ev of customEvents) checkedState[ev.id] = true;
-  lsSet(LS_CHECKED, checkedState);
+  lsSet(dsKey(LS_CHECKED), checkedState);
   renderSidebar();
   refreshCalendar();
 });
@@ -1166,7 +1276,7 @@ document.getElementById('btn-deselect-all').addEventListener('click', () => {
     for (const id of getModuleCheckIds(mod)) checkedState[id] = false;
   }
   for (const ev of customEvents) checkedState[ev.id] = false;
-  lsSet(LS_CHECKED, checkedState);
+  lsSet(dsKey(LS_CHECKED), checkedState);
   renderSidebar();
   refreshCalendar();
 });
@@ -1186,8 +1296,11 @@ document.getElementById('ab-group').addEventListener('click', (e) => {
 /* =====================================================================
    SIDEBAR TOGGLE
    ===================================================================== */
-document.getElementById('btn-toggle-sidebar').addEventListener('click', () => {
-  document.getElementById('sidebar').classList.toggle('collapsed');
+document.getElementById('sidebar-toggle').addEventListener('click', () => {
+  const sidebar = document.getElementById('sidebar');
+  const btn = document.getElementById('sidebar-toggle');
+  sidebar.classList.toggle('collapsed');
+  btn.textContent = sidebar.classList.contains('collapsed') ? '▶' : '◀';
 });
 
 /* =====================================================================
@@ -1280,8 +1393,8 @@ function getCombinations(arr, k) {
   return [...withHead, ...withoutHead];
 }
 
-const DAY_DE = {
-  monday: 'Mo', tuesday: 'Di', wednesday: 'Mi', thursday: 'Do', friday: 'Fr',
+const DAY_EN = {
+  monday: 'Mon', tuesday: 'Tue', wednesday: 'Wed', thursday: 'Thu', friday: 'Fri',
 };
 
 const MAX_OPTIMIZER_RESULTS = 10;
@@ -1290,7 +1403,7 @@ function renderOptimizerResults(results) {
   const container = document.getElementById('opt-results');
   container.innerHTML = '';
   if (results.length === 0) {
-    container.textContent = 'Keine Ergebnisse.';
+    container.textContent = 'No results.';
     return;
   }
   const minConflicts = results[0].conflicts;
@@ -1298,7 +1411,7 @@ function renderOptimizerResults(results) {
     const row = document.createElement('div');
     row.className = 'opt-result-row' + (i === 0 ? ' opt-result-best' : '');
 
-    const daysStr = res.days.map(d => DAY_DE[d]).join(', ');
+    const daysStr = res.days.map(d => DAY_EN[d]).join(', ');
     const days = document.createElement('span');
     days.className = 'opt-result-days';
     days.textContent = daysStr;
@@ -1306,8 +1419,8 @@ function renderOptimizerResults(results) {
     const conflicts = document.createElement('span');
     conflicts.className = 'opt-result-conflicts';
     conflicts.textContent = res.conflicts === 0
-      ? '✓ kein Konflikt'
-      : `${res.conflicts} Konflikt${res.conflicts > 1 ? 'e' : ''}`;
+      ? '✓ no conflicts'
+      : `${res.conflicts} conflict${res.conflicts > 1 ? 's' : ''}`;
 
     row.append(days, conflicts);
     row.addEventListener('click', () => {
@@ -1332,10 +1445,10 @@ function showTooltip(info) {
   const lines = [];
   if (props.moduleName) lines.push(`<b>${props.moduleName}</b>`);
   if (props.moduleNumber) lines.push(`<span style="opacity:0.7">${props.moduleNumber}</span>`);
-  if (props.courseType) lines.push(`Typ: ${props.courseType}`);
+  if (props.courseType) lines.push(`Type: ${props.courseType}`);
   if (props.room) lines.push(`📍 ${props.room}`);
   if (props.slotGroup) lines.push(`Slot: ${props.slotGroup}`);
-  if (props.weekPattern) lines.push(`Woche: ${props.weekPattern}`);
+  if (props.weekPattern) lines.push(`Week: ${props.weekPattern}`);
   if (props.lecturers && props.lecturers.length) lines.push(`👤 ${props.lecturers.join(', ')}`);
   if (props.additionalInfo) lines.push(`ℹ️ ${props.additionalInfo}`);
   if (props.notes) lines.push(`📝 ${props.notes}`);
@@ -1383,7 +1496,7 @@ function initCalendar() {
     editable: false,
     selectable: false,
     height: '100%',
-    locale: 'de',
+    locale: 'en',
     firstDay: 1,                    // Monday
     validRange: {
       start: REFERENCE_MONDAY,
@@ -1395,6 +1508,8 @@ function initCalendar() {
       const props = info.event.extendedProps;
       if (props.isCustom) {
         openCustomEventModal(info.event.id);
+      } else if (props.moduleNumber) {
+        highlightModuleInSidebar(props.moduleNumber);
       }
     },
     events: [],
@@ -1403,35 +1518,72 @@ function initCalendar() {
 }
 
 /* =====================================================================
+   LOAD DATASET
+   ===================================================================== */
+async function loadDataset(url) {
+  const errorEl = document.getElementById('dataset-error');
+  if (errorEl) errorEl.remove();
+  try {
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    coursesData = await resp.json();
+    const gen = coursesData._generated;
+    document.getElementById('generated-label').textContent =
+      gen ? `Generated: ${gen.replace('T', ' ').replace('Z', ' UTC')}` : '';
+  } catch (err) {
+    document.getElementById('calendar-wrapper').insertAdjacentHTML('afterbegin',
+      `<div id="dataset-error" style="background:#fde;padding:10px;border-radius:4px;margin-bottom:8px;font-size:13px;">
+        ⚠️ Error loading <code>${url}</code>: ${err.message}<br>
+        Please run <code>python3 parse.py</code> first and serve via a local server
+        (e.g. <code>python3 -m http.server 8000</code>).
+       </div>`);
+    return;
+  }
+  // Update dataset scope and reload per-dataset state
+  currentDatasetUrl = url;
+  checkedState   = lsGet(dsKey(LS_CHECKED), {});
+  expandedState  = lsGet(dsKey(LS_EXPANDED), {});
+  colorOverrides = lsGet(dsKey(LS_COLORS), {});
+  renderSidebar();
+  refreshCalendar();
+}
+
+/* =====================================================================
    BOOTSTRAP
    ===================================================================== */
 async function bootstrap() {
-  // Load persisted state
-  colorOverrides = lsGet(LS_COLORS, {});
-  customEvents   = lsGet(LS_CUSTOM, []);
-  checkedState   = lsGet(LS_CHECKED, {});
-  expandedState  = lsGet(LS_EXPANDED, {});
+  // Load persisted global state (per-dataset state loaded inside loadDataset)
+  customEvents = lsGet(LS_CUSTOM, []);
 
   // Init calendar first (shows empty grid immediately)
   initCalendar();
 
-  // Load courses.json
+  // Populate dataset dropdown from manifest
+  const sel = document.getElementById('dataset-select');
   try {
-    const resp = await fetch('./courses.json');
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    coursesData = await resp.json();
-  } catch (err) {
-    document.getElementById('calendar-wrapper').insertAdjacentHTML('afterbegin',
-      `<div style="background:#fde;padding:10px;border-radius:4px;margin-bottom:8px;font-size:13px;">
-        ⚠️ Fehler beim Laden von courses.json: ${err.message}<br>
-        Bitte führe zuerst <code>python3 parse.py</code> aus und öffne die Seite über einen lokalen Server
-        (z.B. <code>python3 -m http.server 8000</code>).
-       </div>`);
-    return;
+    const manifest = await fetch('datasets/manifest.json').then(r => r.json());
+    manifest.forEach(({ label, url }) => {
+      const opt = document.createElement('option');
+      opt.value = url;
+      opt.textContent = label;
+      sel.appendChild(opt);
+    });
+  } catch {
+    // Fallback: keep whatever options were already in the markup
   }
 
-  renderSidebar();
-  refreshCalendar();
+  // Restore previously selected dataset
+  const savedDataset = lsGet('modulplan_dataset', null);
+  if (savedDataset && [...sel.options].some(o => o.value === savedDataset)) {
+    sel.value = savedDataset;
+  }
+
+  sel.addEventListener('change', (e) => {
+    lsSet('modulplan_dataset', e.target.value);
+    loadDataset(e.target.value);
+  });
+
+  await loadDataset(sel.value);
 }
 
 document.addEventListener('DOMContentLoaded', bootstrap);

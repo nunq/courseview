@@ -1,0 +1,10 @@
+[
+  {
+    "label": "M.Sc. Informatik SS26",
+    "url": "datasets/courses_ma_ss26.json"
+  },
+  {
+    "label": "B.Sc. Informatik SS26",
+    "url": "datasets/courses_ba_ss26.json"
+  }
+]

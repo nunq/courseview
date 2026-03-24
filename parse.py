@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
-parse.py — Parse Master Informatik.html into courses.json
+parse.py — Parse a study schedule HTML file into a courses JSON file.
 """
 
+import argparse
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from bs4 import BeautifulSoup
-
-INPUT_FILE = Path(__file__).with_name("Master Informatik.html")
-OUTPUT_FILE = Path(__file__).with_name("courses.json")
 
 DAY_MAP = {
     "montags": "monday",
@@ -153,29 +152,67 @@ def parse_semester(studgang_div):
 
 
 def main():
-    html = INPUT_FILE.read_text(encoding="utf-8")
+    parser = argparse.ArgumentParser(
+        description="Parse a schedule HTML file into a courses JSON file."
+    )
+    parser.add_argument(
+        "-i", "--input-file",
+        type=Path,
+        help="Path to the input HTML file"
+    )
+    parser.add_argument(
+        "-o", "--output-file",
+        type=Path,
+        help="Path for the output JSON file"
+    )
+    args = parser.parse_args()
+
+    input_file: Path = args.input_file
+    output_file: Path = args.output_file
+
+    if not input_file.exists():
+        print(f"Error: input file not found: {input_file}", file=sys.stderr)
+        sys.exit(1)
+
+    html = input_file.read_text(encoding="utf-8")
     soup = BeautifulSoup(html, "lxml")
 
     # Track seen module IDs to avoid duplicates when a module appears
     # in multiple semester sections
-    seen_ids = {}
+    seen_ids = {}   # module_id -> first semester it was seen in
+    duplicate_ids = []
     modules = []
 
     semester_divs = soup.select("div.n-studgang-semester")
+    print(f"Found {len(semester_divs)} semester section(s)")
     for sem_div in semester_divs:
         semester = parse_semester(sem_div)
         for modul_div in sem_div.select("div.MODUL.s-column-container"):
             number_el = modul_div.select_one(".s-modul-number")
+            title_el = modul_div.select_one(".s-modul-title")
             module_id = text(number_el)
+            module_name = text(title_el)
             if module_id in seen_ids:
+                print(f"  [dedup] {module_id}  \"{module_name}\"  "
+                      f"(first seen in semester {seen_ids[module_id]}, skipping semester {semester})")
+                duplicate_ids.append(module_id)
                 continue
-            seen_ids[module_id] = True
+            seen_ids[module_id] = semester
             mod = parse_module(modul_div, semester)
             modules.append(mod)
 
-    result = {"modules": modules}
-    OUTPUT_FILE.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Wrote {len(modules)} modules to {OUTPUT_FILE}")
+    if duplicate_ids:
+        print(f"Deduplicated {len(duplicate_ids)} module occurrence(s) "
+              f"({len(set(duplicate_ids))} distinct module(s) appeared in multiple semesters)")
+
+    result = {
+        "_generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "modules": modules,
+    }
+
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    output_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Wrote {len(modules)} modules to {output_file}")
 
 
 if __name__ == "__main__":

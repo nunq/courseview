@@ -1,0 +1,1941 @@
+{
+  "_generated": "2026-03-24T17:51:40Z",
+  "modules": [
+    {
+      "id": "10-201-1015",
+      "number": "10-201-1015",
+      "name": "Lineare Algebra [für Informatik]",
+      "category": "Pflichtmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-201-1015-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Lineare Algebra",
+          "lecturers": [
+            "Tautenhahn, Martin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 7",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-1015-Übung-1",
+          "type": "Übung",
+          "title": "Lineare Algebra",
+          "lecturers": [
+            "Kreidler, Henrik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2001-1",
+      "number": "10-201-2001-1",
+      "name": "Algorithmen und Datenstrukturen 1",
+      "category": "Pflichtmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-201-2001-1-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Algorithmen und Datenstrukturen 1",
+          "lecturers": [
+            "Gatter, Thomas",
+            "Stadler, Peter F."
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "Audimax, Augustusplatz",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2001-1-Übung-1",
+          "type": "Übung",
+          "title": "Algorithmen und Datenstrukturen 1",
+          "lecturers": [
+            "Müller, Lydia"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Online-Kurs",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "f",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "g",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "h",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Härtelstraße 16-18, S 017",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "i",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Härtelstraße 16-18, S 017",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "j",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Härtelstraße 16-18, S 018",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2005-2",
+      "number": "10-201-2005-2",
+      "name": "Programmierparadigmen",
+      "category": "Pflichtmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-201-2005-2-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Programmierparadigmen",
+          "lecturers": [
+            "Scheuermann, Gerik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Audimax, Augustusplatz",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2005-2-Übung-1",
+          "type": "Übung",
+          "title": "Programmierparadigmen",
+          "lecturers": [
+            "Heine, Christian"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2108-1",
+      "number": "10-201-2108-1",
+      "name": "Logik",
+      "category": "Pflichtmodul",
+      "semester": 2,
+      "courses": [
+        {
+          "id": "10-201-2108-1-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Logik",
+          "lecturers": [
+            "Baumann, Ringo"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 9",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2108-1-Übung-1",
+          "type": "Übung",
+          "title": "Logik",
+          "lecturers": [
+            "Heine, Anne-Marie"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": "A",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "monday",
+              "weekPattern": "B",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "monday",
+              "weekPattern": "A",
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "monday",
+              "weekPattern": "B",
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "tuesday",
+              "weekPattern": "A",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "f",
+              "day": "tuesday",
+              "weekPattern": "B",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "g",
+              "day": "wednesday",
+              "weekPattern": "A",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "h",
+              "day": "wednesday",
+              "weekPattern": "B",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07-102-4102",
+      "number": "07-102-4102",
+      "name": "Entwicklung verteilter Anwendungen",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "07-102-4102-Vorlesung_mit_integrierter_Übung-0",
+          "type": "Vorlesung mit integrierter Übung",
+          "title": "Entwicklung verteilter Anwendungen",
+          "lecturers": [
+            "Kovacs, Pascal"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "WiFa, Grimmaische Straße 12, Raum I-125, SR 4",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "07-102-4102-Seminar-1",
+          "type": "Seminar",
+          "title": "Entwicklung verteilter Anwendungen",
+          "lecturers": [
+            "Kovacs, Pascal"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "WiFa, Grimmaische Straße 12, Raum I-125, SR 4",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2006-2",
+      "number": "10-201-2006-2",
+      "name": "Grundlagen der Technischen Informatik 2",
+      "category": "Pflichtmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2006-2-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Grundlagen der Technischen Informatik 2",
+          "lecturers": [
+            "Middendorf, Martin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2006-2-Übung-1",
+          "type": "Übung",
+          "title": "Grundlagen der Technischen Informatik 2",
+          "lecturers": [
+            "Wieseke, Nicolas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": "A",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2006-2-Praktikum-2",
+          "type": "Praktikum",
+          "title": "Hardware-Praktikum",
+          "lecturers": [
+            "Krenzer, Dominik",
+            "Müller, Lydia"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": "B",
+              "timeStart": "13:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-535, Hardwarelabor",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": "A",
+              "timeStart": "13:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-535, Hardwarelabor",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "wednesday",
+              "weekPattern": "B",
+              "timeStart": "09:15",
+              "timeEnd": "12:45",
+              "room": "Paulinum, P-535, Hardwarelabor",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "wednesday",
+              "weekPattern": "A",
+              "timeStart": "09:15",
+              "timeEnd": "12:45",
+              "room": "Paulinum, P-535, Hardwarelabor",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "thursday",
+              "weekPattern": "B",
+              "timeStart": "09:15",
+              "timeEnd": "12:45",
+              "room": "Paulinum, P-535, Hardwarelabor",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "f",
+              "day": "thursday",
+              "weekPattern": "A",
+              "timeStart": "09:15",
+              "timeEnd": "12:45",
+              "room": "Paulinum, P-535, Hardwarelabor",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2006-2-Übung_[Ergänzende_Veranstaltung]-3",
+          "type": "Übung [Ergänzende Veranstaltung]",
+          "title": "Tutorium Grundlagen der Technischen Informatik 2",
+          "lecturers": [
+            "???"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": "B",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2006-2-Übung_[Ergänzende_Veranstaltung]-4",
+          "type": "Übung [Ergänzende Veranstaltung]",
+          "title": "Tutorium zum Hardware-Praktikum für Lehramtsstudierende für Versuch 1 und 2",
+          "lecturers": [
+            "Müller, Lydia"
+          ],
+          "additionalInfo": "Diese Verstaltung ist optional und für Lehramtsstudierenden angedacht. Es sind jedoch\n                                                         alle Studierenden des Moduls willkommen, sofern Platz ist",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": "A",
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2006-2-Übung_[Ergänzende_Veranstaltung]-5",
+          "type": "Übung [Ergänzende Veranstaltung]",
+          "title": "Tutorium zum Hardware-Praktikum für Lehramtsstudierende für Versuch 1 und 2",
+          "lecturers": [
+            "Müller, Lydia"
+          ],
+          "additionalInfo": "Diese Verstaltung ist optional und für Lehramtsstudierenden nagedacht. Es sind jedoch\n                                                         alle Studierenden des Moduls willkommen, sofern Platz ist",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": "B",
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2009",
+      "number": "10-201-2009",
+      "name": "Berechenbarkeit",
+      "category": "Pflichtmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2009-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Berechenbarkeit",
+          "lecturers": [
+            "Maletti, Andreas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 2",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2009-Übung-1",
+          "type": "Übung",
+          "title": "Berechenbarkeit",
+          "lecturers": [
+            "Schönherr, Moritz"
+          ],
+          "additionalInfo": "will be held in English will be held in English",
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": "A",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "monday",
+              "weekPattern": "B",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "tuesday",
+              "weekPattern": "B",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "tuesday",
+              "weekPattern": "A",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "tuesday",
+              "weekPattern": "A",
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "f",
+              "day": "tuesday",
+              "weekPattern": "B",
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "g",
+              "day": "wednesday",
+              "weekPattern": "B",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "h",
+              "day": "wednesday",
+              "weekPattern": "A",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "i",
+              "day": "thursday",
+              "weekPattern": "A",
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "j",
+              "day": "thursday",
+              "weekPattern": "B",
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2107",
+      "number": "10-201-2107",
+      "name": "Rechnernetze",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2107-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Rechnernetze",
+          "lecturers": [
+            "Lindemann, Christoph"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2107-Übung-1",
+          "type": "Übung",
+          "title": "Rechnernetze",
+          "lecturers": [
+            "Schulze, Linus Curt"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2208",
+      "number": "10-201-2208",
+      "name": "Seminar Computergraphik",
+      "category": "Seminarmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2208-Seminar-0",
+          "type": "Seminar",
+          "title": "Illustrative Visualisierung",
+          "lecturers": [
+            "Hombeck, Jan",
+            "Lawonn, Kai"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "c",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2208-Seminar-1",
+          "type": "Seminar",
+          "title": "Visual Analytics",
+          "lecturers": [
+            "Lawonn, Kai"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Augusteum, A-314",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2208-Seminar-2",
+          "type": "Seminar",
+          "title": "Visualisierung mit Unity",
+          "lecturers": [
+            "Hombeck, Jan",
+            "Lawonn, Kai"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2209",
+      "number": "10-201-2209",
+      "name": "Computergrafik",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2209-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Computergrafik",
+          "lecturers": [
+            "Scheuermann, Gerik"
+          ],
+          "additionalInfo": "Die Vorlesung wird hinterher auch als Aufzeichnung zur Verfügung gestellt werden.",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 12",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2209-Praktikum-1",
+          "type": "Praktikum",
+          "title": "Computergrafik",
+          "lecturers": [
+            "Nsonga, Baldwin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2210",
+      "number": "10-201-2210",
+      "name": "Datenbankpraktikum",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2210-Praktikum-0",
+          "type": "Praktikum",
+          "title": "Relationales Datenbankpraktikum",
+          "lecturers": [
+            "Christen, Victor",
+            "Lange, Lucas",
+            "Uhrich, Benjamin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2212",
+      "number": "10-201-2212",
+      "name": "Datenbanksysteme 2",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2212-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Datenbanksysteme 2",
+          "lecturers": [
+            "Lange, Lucas",
+            "Uhrich, Benjamin"
+          ],
+          "additionalInfo": "etwa alle 2 Wochen Konsultationstermin im Hörsaal",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2212-Übung-1",
+          "type": "Übung",
+          "title": "Datenbanksysteme 2",
+          "lecturers": [
+            "Lange, Lucas",
+            "Uhrich, Benjamin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": "A",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": "B",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "thursday",
+              "weekPattern": "A",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "thursday",
+              "weekPattern": "B",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2317",
+      "number": "10-201-2317",
+      "name": "Natural Language Processing",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2317-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Natural Language Processing",
+          "lecturers": [
+            "Weißweiler, Leonie"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2317-Übung-1",
+          "type": "Übung",
+          "title": "Natural Language Processing",
+          "lecturers": [
+            "Nakai, Toshiki"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2320",
+      "number": "10-201-2320",
+      "name": "Software Engineering Praktikum",
+      "category": "Pflichtmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2320-Praktikum-0",
+          "type": "Praktikum",
+          "title": "Softwaretechnikpraktikum",
+          "lecturers": [
+            "Jahns, Stefan",
+            "Siegmund, Norbert"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "17:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2401",
+      "number": "10-201-2401",
+      "name": "Formale Argumentation",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-201-2401-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Formale Argumentation",
+          "lecturers": [
+            "Baumann, Ringo"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2401-Übung-1",
+          "type": "Übung",
+          "title": "Formale Argumentation",
+          "lecturers": [
+            "Keitsch, Jamie"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": "B",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-207-0101",
+      "number": "10-207-0101",
+      "name": "Aktuelle Trends in den Digital Humanities",
+      "category": "Ergänzungsbereich",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-207-0101-Seminar-0",
+          "type": "Seminar",
+          "title": "Aktuelle Trends in den Digital Humanities: Digital Environmental Humanities",
+          "lecturers": [
+            "Burghardt, Manuel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-207-0101-Seminar-1",
+          "type": "Seminar",
+          "title": "Aktuelle Trends in den Digital Humanities: GenderBilder in visuellen Archiven",
+          "lecturers": [
+            "Burghardt, Manuel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM002",
+      "number": "10-MAT-BM002",
+      "name": "Analysis 2 [für B.Sc. Mathe]",
+      "category": "Ergänzungsbereich",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-MAT-BM002-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Analysis 2",
+          "lecturers": [
+            "Hirsch, Jonas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM002-Übung-1",
+          "type": "Übung",
+          "title": "Analysis 2",
+          "lecturers": [
+            "Kliem, Sandra"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM002-Übung-2",
+          "type": "Übung",
+          "title": "Hörsaalübung Analysis 2",
+          "lecturers": [
+            "Neubert, Marius"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "Hs 2",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM004",
+      "number": "10-MAT-BM004",
+      "name": "Lineare Algebra 2",
+      "category": "Ergänzungsbereich",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "10-MAT-BM004-Übung-0",
+          "type": "Übung",
+          "title": "Hörsaalübung Lineare Algebra 2",
+          "lecturers": [
+            "Zimmermann, Konrad"
+          ],
+          "additionalInfo": "Die Hörsaalübung ist für das Lehramt eine fakultative Zusatzveranstaltung",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM004-Vorlesung-1",
+          "type": "Vorlesung",
+          "title": "Lineare Algebra 2",
+          "lecturers": [
+            "Grabowski, Łukasz"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 3",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM004-Übung-2",
+          "type": "Übung",
+          "title": "Lineare Algebra 2",
+          "lecturers": [
+            "Zimmermann, Konrad"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMI-26S03",
+      "number": "FMI-26S03",
+      "name": "Einführung in Deep Learning in der Bildverarbeitung",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "FMI-26S03-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Einführung in Deep Learning in der Bildverarbeitung",
+          "lecturers": [
+            "Binder, Alexander"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "FMI-26S03-Übung-1",
+          "type": "Übung",
+          "title": "Einführung in Deep Learning in der Bildverarbeitung",
+          "lecturers": [
+            "Binder, Alexander"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": "A",
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMI-26S08",
+      "number": "FMI-26S08",
+      "name": "Theoretische Grundlagen von Datenbanken",
+      "category": "Kernmodul",
+      "semester": 4,
+      "courses": [
+        {
+          "id": "FMI-26S08-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Theoretische Grundlagen von Datenbanken",
+          "lecturers": [
+            "Lutz, Carsten"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "FMI-26S08-Übung-1",
+          "type": "Übung",
+          "title": "Theoretische Grundlagen von Datenbanken",
+          "lecturers": [
+            "Lutz, Carsten"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": "A",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2010",
+      "number": "10-201-2010",
+      "name": "Bachelorseminar Informatik",
+      "category": "Pflichtmodul",
+      "semester": 6,
+      "courses": [
+        {
+          "id": "10-201-2010-Seminar-0",
+          "type": "Seminar",
+          "title": "Bachelor- und Masterseminar Algebraische und Logische Grundlagen der Informatik",
+          "lecturers": [
+            "Maletti, Andreas"
+          ],
+          "additionalInfo": "nach Vereinbarung",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-201-2010-Seminar-1",
+          "type": "Seminar",
+          "title": "Bachelor- und Masterseminar Bioinformatik",
+          "lecturers": [
+            "Stadler, Peter F."
+          ],
+          "additionalInfo": "Präsentation möglich sofern eine Bachelor- bzw. Masterarbeit an der Professur für\n                                                         Bioinformatik angefertigt wird",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": "Härtelstraße 16-18, S 109",
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-201-2010-Seminar-2",
+          "type": "Seminar",
+          "title": "Bachelor- und Masterseminar Grundlagen der Wissensrepräsentation",
+          "lecturers": [
+            "Lutz, Carsten"
+          ],
+          "additionalInfo": "nach Vereinbarung",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-201-2010-Seminar-3",
+          "type": "Seminar",
+          "title": "Bachelor- und Masterseminar Neuromorphe Informationsverarbeitung",
+          "lecturers": [
+            "Bogdan, Martin"
+          ],
+          "additionalInfo": "nach Vereinbarung",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-201-2010-Seminar-4",
+          "type": "Seminar",
+          "title": "Forschungs-, Bachelor- und Masterseminar BSV",
+          "lecturers": [
+            "Scheuermann, Gerik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2206",
+      "number": "10-201-2206",
+      "name": "Interaktive Visuelle Datenanalyse 1",
+      "category": "Vertiefungsmodul",
+      "semester": 6,
+      "courses": [
+        {
+          "id": "10-201-2206-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Informationsvisualisierung 1",
+          "lecturers": [
+            "Zeckzer, Dirk"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2206-Vorlesung-1",
+          "type": "Vorlesung",
+          "title": "Interactive Visual Data Mining 1",
+          "lecturers": [
+            "Meinecke, Christofer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2206-Praktikum-2",
+          "type": "Praktikum",
+          "title": "Interaktive Visuelle Datenanalyse 1",
+          "lecturers": [
+            "Zeckzer, Dirk"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            },
+            {
+              "slotGroup": "b",
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2213",
+      "number": "10-201-2213",
+      "name": "Verifikation",
+      "category": "Kernmodul",
+      "semester": 6,
+      "courses": [
+        {
+          "id": "10-201-2213-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Introduction to Verification",
+          "lecturers": [
+            "Quaas, Karin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2213-Übung-1",
+          "type": "Übung",
+          "title": "Introduction to Verification",
+          "lecturers": [
+            "Quaas, Karin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
