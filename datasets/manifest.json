@@ -16,6 +16,10 @@
     "url": "datasets/courses_la-math-gym_ss26.json"
   },
   {
+    "label": "SS26 – Bildungswissenschaften – Lehramt (Gym)",
+    "url": "datasets/courses_biwi_gym_stex_ss26.json"
+  },
+  {
     "label": "SS26 – Informatik & Mathematik – Lehramt (Gym)",
     "url": "datasets/courses_la-gym_ss26.json"
   }

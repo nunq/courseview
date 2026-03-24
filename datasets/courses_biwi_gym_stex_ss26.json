@@ -1,0 +1,3183 @@
+{
+  "_generated": "2026-03-24T20:41:39Z",
+  "modules": [
+    {
+      "id": "05-BWI-01-SEK",
+      "number": "05-BWI-01-SEK",
+      "name": "Einführung in die Schulpädagogik und die Allgemeine Didaktik",
+      "category": null,
+      "semester": "SoSe 2026",
+      "courses": [
+        {
+          "id": "05-BWI-01-SEK-SE-0",
+          "type": "SE",
+          "title": "Tätigkeitsfelder, Beruf und Rolle der Lehrkraft",
+          "lecturers": [
+            "Dr. Mamadou Mbaye"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-1",
+          "type": "SE",
+          "title": "Tätigkeitsfelder, Beruf und Rolle der Lehrkraft",
+          "lecturers": [
+            "Dr. Mamadou Mbaye"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-2",
+          "type": "SE",
+          "title": "Tätigkeitsfelder, Beruf und Rolle der Lehrkraft",
+          "lecturers": [
+            "Dr. Mamadou Mbaye"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-3",
+          "type": "SE",
+          "title": "Tätigkeitsfelder, Beruf und Rolle der Lehrkraft",
+          "lecturers": [
+            "Ariane Hinneburg"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-4",
+          "type": "SE",
+          "title": "Tätigkeitsfelder, Beruf und Rolle der Lehrkraft",
+          "lecturers": [
+            "Ariane Hinneburg"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-5",
+          "type": "SE",
+          "title": "Tätigkeitsfelder, Beruf und Rolle der Lehrkraft",
+          "lecturers": [
+            "Ariane Hinneburg"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-6",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Sekundarstufe",
+          "lecturers": [
+            "Dr. Emi Kinoshita"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-7",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Sekundarstufe",
+          "lecturers": [
+            "Dr. Emi Kinoshita"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-8",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Sekundarstufe",
+          "lecturers": [
+            "Dr. Mamadou Mbaye"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-9",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Sekundarstufe",
+          "lecturers": [
+            "Dr. Mamadou Mbaye"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-10",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Sekundarstufe",
+          "lecturers": [
+            "Dr. Mamadou Mbaye"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-11",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Sekundarstufe",
+          "lecturers": [
+            "Dr. Emi Kinoshita"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-SE-12",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Sekundarstufe",
+          "lecturers": [
+            "Dr. Emi Kinoshita"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-SEK-VL-13",
+          "type": "VL",
+          "title": "Grundlagen der Schulpädagogik und der Allgemeinen Didaktik",
+          "lecturers": [
+            "Prof. Dr. Maria Hallitzky",
+            "Dr. Birte Oetjen"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-BWI-01-PRIM",
+      "number": "05-BWI-01-PRIM",
+      "name": "Einführung in die Schulpädagogik und die Allgemeine Didaktik",
+      "category": null,
+      "semester": "WiSe 2025/26",
+      "courses": [
+        {
+          "id": "05-BWI-01-PRIM-SE-0",
+          "type": "SE",
+          "title": "Tätigkeitsfelder, Beruf und Rolle der Lehrkraft",
+          "lecturers": [
+            "N.N."
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": []
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-1",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Anne Stein"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-2",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Anne Stein"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-3",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Eric Kanold"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-4",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Eric Kanold"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-5",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Anne Stein"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-6",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Anne Stein"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-VL-7",
+          "type": "VL",
+          "title": "Grundlagen der Schulpädagogik und der Allgemeinen Didaktik",
+          "lecturers": [
+            "N.N."
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": []
+        },
+        {
+          "id": "05-BWI-01-PRIM-VL-8",
+          "type": "VL",
+          "title": "Grundlagen der Schulpädagogik und der Allgemeinen Didaktik",
+          "lecturers": [
+            "Prof. Dr. Maria Hallitzky",
+            "Dr. Birte Oetjen"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-9",
+          "type": "SE",
+          "title": "Tätigkeitsfelder, Beruf und Rolle der Lehrkraft",
+          "lecturers": [
+            "N.N."
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": []
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-10",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Anne Stein"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-11",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Anne Stein"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-12",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Eric Kanold"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-13",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Eric Kanold"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-14",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Anne Stein"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-SE-15",
+          "type": "SE",
+          "title": "Lehren und Lernen in der Primarstufe",
+          "lecturers": [
+            "Anne Stein"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-01-PRIM-VL-16",
+          "type": "VL",
+          "title": "Grundlagen der Schulpädagogik und der Allgemeinen Didaktik",
+          "lecturers": [
+            "N.N."
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": []
+        }
+      ]
+    },
+    {
+      "id": "05-BWI-02",
+      "number": "05-BWI-02",
+      "name": "Praxis- und Studienfeld Schule",
+      "category": null,
+      "semester": "SoSe 2026",
+      "courses": [
+        {
+          "id": "05-BWI-02-SE-0",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Ariane Hinneburg"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-1",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Ariane Hinneburg"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-2",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Ariane Hinneburg"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "07:15",
+              "timeEnd": "08:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-3",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Ariane Hinneburg"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-4",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Mirjam Leistner"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-5",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Mirjam Leistner"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-6",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Mirjam Leistner"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-7",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "N.N."
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-8",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Mirjam Leistner"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-9",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Mandy Klatt"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-10",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Tim Haigis"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-11",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Dr. Christin Lotz"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-12",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Dr. Christin Lotz"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-13",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Prof. Dr. Anne Deiglmayr"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-02-SE-14",
+          "type": "SE",
+          "title": "Praxis- und Studienfeld Schule",
+          "lecturers": [
+            "Prof. Dr. Anne Deiglmayr"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-BWI-03",
+      "number": "05-BWI-03",
+      "name": "Entwicklungspsychologie",
+      "category": null,
+      "semester": "SoSe 2026",
+      "courses": [
+        {
+          "id": "05-BWI-03-SE-0",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Benjamin Hübner"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-1",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Robert Wilkens"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-2",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Robert Wilkens"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-3",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Benjamin Hübner"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-4",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Cornelia Schulze"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-5",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Robert Wilkens"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-6",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Cornelia Schulze"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-7",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Robert Wilkens"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-8",
+          "type": "SE",
+          "title": "Entwicklungspsychologie [Digitallehre]",
+          "lecturers": [
+            "Dr. Cathrin Dietzel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-9",
+          "type": "SE",
+          "title": "Entwicklungspsychologie[Digitallehre]",
+          "lecturers": [
+            "Dr. Cathrin Dietzel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "07:30",
+              "timeEnd": "09:00",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-10",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Cornelia Schulze"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-11",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Cathrin Dietzel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-12",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Benjamin Hübner"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-13",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Cornelia Schulze"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-14",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Benjamin Hübner"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-SE-15",
+          "type": "SE",
+          "title": "Entwicklungspsychologie",
+          "lecturers": [
+            "Dr. Cathrin Dietzel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-03-VL-16",
+          "type": "VL",
+          "title": "Grundlagen Entwicklungspsychologie",
+          "lecturers": [
+            "Prof. Dr. Henrik Saalbach"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-BWI-04",
+      "number": "05-BWI-04",
+      "name": "Lernen und Instruktion",
+      "category": null,
+      "semester": "SoSe 2026",
+      "courses": [
+        {
+          "id": "05-BWI-04-SE-0",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Dr. Christian Hahn"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-1",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Dr. Berit Streubel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-2",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Monique Stecher"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-3",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Monique Stecher"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-4",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Dr. Christian Hahn"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-5",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Dr. Christian Hahn"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-6",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Moritz Karl Wußing"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-7",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Monique Stecher"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-8",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Moritz Karl Wußing"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-9",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Monique Stecher"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-10",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Dr. Berit Streubel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-11",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Moritz Karl Wußing"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-12",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Moritz Karl Wußing"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-SE-13",
+          "type": "SE",
+          "title": "Lernen und Instruktion",
+          "lecturers": [
+            "Dr. Berit Streubel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-04-VL-14",
+          "type": "VL",
+          "title": "Grundlagen Lernen und Instruktion",
+          "lecturers": [
+            "Prof. Dr. Henrik Saalbach"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "07:30",
+              "timeEnd": "09:00",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-BWI-05",
+      "number": "05-BWI-05",
+      "name": "Bildung und Erziehung in historischer, systematischer und international vergleichender Perspektive",
+      "category": null,
+      "semester": "SoSe 2026",
+      "courses": [
+        {
+          "id": "05-BWI-05-SE-0",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive [Digitallehre]",
+          "lecturers": [
+            "Christian Herbig"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-SE-1",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive",
+          "lecturers": [
+            "Sarah Uhlemann"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-SE-2",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive",
+          "lecturers": [
+            "Dr. Katja Lieber"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-SE-3",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive",
+          "lecturers": [
+            "Dr. Katja Lieber"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-SE-4",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive",
+          "lecturers": [
+            "Dr. Katja Lieber"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-SE-5",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive",
+          "lecturers": [
+            "Dr. Katja Lieber"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-SE-6",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive",
+          "lecturers": [
+            "Dr. Katja Lieber"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-SE-7",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive",
+          "lecturers": [
+            "Dr. Katja Lieber"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-SE-8",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive",
+          "lecturers": [
+            "Dr. Katja Lieber"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-SE-9",
+          "type": "SE",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive",
+          "lecturers": [
+            "Dr. Katja Lieber"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-05-VL-10",
+          "type": "VL",
+          "title": "Bildungssysteme: Forschungsergebnisse in historischer, systematischer und international vergleichender Perspektive  [Digitallehre synchron]",
+          "lecturers": [
+            "Prof. Dr. Jonas Flöter"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-BWI-06",
+      "number": "05-BWI-06",
+      "name": "Diagnostik, Förderung, Beratung",
+      "category": null,
+      "semester": "SoSe 2026",
+      "courses": [
+        {
+          "id": "05-BWI-06-PN-0",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Romy Schneider"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-1",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-2",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung [Digitallehre]",
+          "lecturers": [
+            "Dr. Romy Schneider"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-3",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-4",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-5",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Anne-Cathrin Päßler"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:30",
+              "timeEnd": "12:30",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-6",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Anne-Cathrin Päßler"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "15:30",
+              "timeEnd": "16:30",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-7",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Katrin Gottlebe"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-8",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-9",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-10",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Romy Schneider"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-11",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Katrin Gottlebe"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-12",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Lea Latzko"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-13",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Sandra Dietrich"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-14",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Romy Schneider"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-15",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Sandra Dietrich"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-16",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Romy Schneider"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-17",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-18",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-19",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Sandra Dietrich"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-20",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung [Digitallehre]",
+          "lecturers": [
+            "Andrea Fischer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-21",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung [Digitallehre]",
+          "lecturers": [
+            "Andrea Fischer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-22",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Lea Latzko"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-23",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung [Digitallehre]",
+          "lecturers": [
+            "Andrea Fischer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-24",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Dr. Sandra Dietrich"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-25",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung [Digitallehre]",
+          "lecturers": [
+            "Dr. Romy Schneider"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-26",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Andrea Fischer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-27",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-28",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Andrea Fischer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-29",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung [Digitallehre]",
+          "lecturers": [
+            "Dr. Romy Schneider"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-30",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-PN-31",
+          "type": "PN",
+          "title": "Diagnostik, Förderung, Beratung",
+          "lecturers": [
+            "Sylvia Mühmel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-06-VL-32",
+          "type": "VL",
+          "title": "Diagnostik, Förderung, Beratung [Digitallehre synchron]",
+          "lecturers": [
+            "Dr. Sandra Dietrich"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05-BWI-07",
+      "number": "05-BWI-07",
+      "name": "Schule als Lern- und Lebensraum",
+      "category": null,
+      "semester": "SoSe 2026",
+      "courses": [
+        {
+          "id": "05-BWI-07-KS-0",
+          "type": "KS",
+          "title": "Wer wird wie repräsentiert?- Diskriminierungsbewusste Reflexion und Einsatz von Medien im Lebensraum Schule",
+          "lecturers": [
+            "Dr. Anne Goldbach",
+            "Nico Leonhardt"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-1",
+          "type": "KS",
+          "title": "Gesundheit und Wohlbefinden von Lehrpersonen",
+          "lecturers": [
+            "Dr. Franziska Greiner-Döchert",
+            "Dr. Robert Wilkens"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-2",
+          "type": "KS",
+          "title": "Einführung in die Schulentwicklungsforschung I",
+          "lecturers": [
+            "Christoph Bülau"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-3",
+          "type": "KS",
+          "title": "Irgendwas mit Medien? I",
+          "lecturers": [
+            "Karsten Nietzschmann"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-4",
+          "type": "KS",
+          "title": "Einführung in die Schulentwicklungsforschung II",
+          "lecturers": [
+            "Christoph Bülau"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-5",
+          "type": "KS",
+          "title": "Irgendwas mit Medien? II",
+          "lecturers": [
+            "Karsten Nietzschmann"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-6",
+          "type": "KS",
+          "title": "Einführung in die Schulentwicklungsforschung III",
+          "lecturers": [
+            "Christoph Bülau"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-7",
+          "type": "KS",
+          "title": "Ganztagsschulen – Schlafende Riesen der Bildungslandschaft I",
+          "lecturers": [
+            "Christoph Bülau"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-8",
+          "type": "KS",
+          "title": "Irgendwas mit Medien? III",
+          "lecturers": [
+            "Karsten Nietzschmann"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-9",
+          "type": "KS",
+          "title": "Hochbegabung I",
+          "lecturers": [
+            "Karsten Nietzschmann"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-10",
+          "type": "KS",
+          "title": "Hochbegabung II",
+          "lecturers": [
+            "Karsten Nietzschmann"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-11",
+          "type": "KS",
+          "title": "Ganztagsschulen – Schlafende Riesen der Bildungslandschaft II",
+          "lecturers": [
+            "Christoph Bülau"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-12",
+          "type": "KS",
+          "title": "Hochbegabung III",
+          "lecturers": [
+            "Karsten Nietzschmann"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-13",
+          "type": "KS",
+          "title": "Schule in der Migrationsgesellschaft I",
+          "lecturers": [
+            "Dr. Makhabbat Kenzhegaliyeva"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-14",
+          "type": "KS",
+          "title": "Schule in der Migrationsgesellschaft II",
+          "lecturers": [
+            "Dr. Makhabbat Kenzhegaliyeva"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-15",
+          "type": "KS",
+          "title": "Ganztagsschulen – Schlafende Riesen der Bildungslandschaft III",
+          "lecturers": [
+            "Christoph Bülau"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-16",
+          "type": "KS",
+          "title": "Lernwerkstätten als Stätten demokratischen Lernens",
+          "lecturers": [
+            "Prof. Dr. Maria Hallitzky"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:00",
+              "timeEnd": "17:00",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-17",
+          "type": "KS",
+          "title": "Lesson Study - Interkulturelle Perspektive auf eigene Professionalisierung und Schulentwicklung",
+          "lecturers": [
+            "Dr. Emi Kinoshita"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-18",
+          "type": "KS",
+          "title": "Virtual Exchange und Studienreise im SoSe 2026 an die Universität Graz zum Thema: Pädagogische Gestaltung des Raums – bildungsgeschichtliche und architektonische Dimensionen",
+          "lecturers": [
+            "Prof. Dr. Jonas Flöter"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:00",
+              "timeEnd": "15:00",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-KS-19",
+          "type": "KS",
+          "title": "School development towards a European identity and democratic culture",
+          "lecturers": [
+            "Dr. Makhabbat Kenzhegaliyeva"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:00",
+              "timeEnd": "12:30",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "05-BWI-07-VL-20",
+          "type": "VL",
+          "title": "Aktuelle Themen der Schulentwicklung in Deutschland [Digitallehre synchron]",
+          "lecturers": [
+            "N.N."
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
