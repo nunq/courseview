@@ -1,8 +1,8 @@
-# modulplaner
+# courseview
 
 visualize available courses in a weekly calender view
 
-link: TODO
+link: https://nunq.github.io/courseview/
 
 ## features
 - persists the selected courses in browser's localstorage
@@ -14,7 +14,7 @@ link: TODO
 ## local setup
 
 - get your `inf-bachelor.html` / `inf-master.html`
-- `python parse.py -i input.html -o datasets/courses_a_bYY.json`
+- `python parse.py -i input.html -o datasets/courses_(ba|ma)_(ss|ws)YY.json`
 - add it to the manifests file `datasets/manifest.json`
 - `python -m http.server 8000 -b 127.0.0.1`
 
