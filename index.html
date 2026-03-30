@@ -814,7 +814,7 @@ function slotToFCEvent(slot, courseId, slotIdx, title, category) {
 /* =====================================================================
    BUILD FC EVENTS FROM PARSED DATA
    ===================================================================== */
-function buildParsedEvents() {
+function buildParsedEvents(ignoreAbFilter = false) {
   const events = [];
   if (!coursesData) return events;
 
@@ -837,7 +837,7 @@ function buildParsedEvents() {
 
           for (let si = 0; si < slots.length; si++) {
             const slot = slots[si];
-            if (!abVisible(slot.weekPattern)) continue;
+            if (!ignoreAbFilter && !abVisible(slot.weekPattern)) continue;
             const title = `${course.title || course.type}${grp !== '_' ? ' ['+grp+']' : ''}`;
             const ev = slotToFCEvent(slot, `${courseId}-grp-${grp}`, si, title, mod.category);
             if (ev) {
@@ -858,7 +858,7 @@ function buildParsedEvents() {
         if (!checkedState[courseId]) continue;
         for (let si = 0; si < course.slots.length; si++) {
           const slot = course.slots[si];
-          if (!abVisible(slot.weekPattern)) continue;
+          if (!ignoreAbFilter && !abVisible(slot.weekPattern)) continue;
           const title = course.title || course.type;
           const ev = slotToFCEvent(slot, courseId, si, title, mod.category);
           if (ev) {
@@ -1775,8 +1775,8 @@ function addDays(date, n) {
 const ALL_DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 
 function openExportModal() {
-  // Collect parsed events
-  const fcEvents = buildParsedEvents();
+  // Collect parsed events (ignore AB filter so both A and B week events are always included)
+  const fcEvents = buildParsedEvents(true);
 
   // Deduplicate by (title, day, timeStart, timeEnd, weekPattern)
   const seen = new Set();
