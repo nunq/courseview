@@ -1726,8 +1726,9 @@ document.addEventListener('DOMContentLoaded', bootstrap);
 function nextMonday(fromDate) {
   const d = new Date(fromDate);
   d.setHours(0, 0, 0, 0);
-  const day = d.getDay(); // 0=Sun,1=Mon,...
-  const diff = day === 1 ? 0 : (8 - day) % 7 || 7;
+  const day = d.getDay(); // 0=Sun,1=Mon,...,6=Sat
+  // 0 days ahead if already Monday; otherwise advance to next Monday
+  const diff = day === 1 ? 0 : day === 0 ? 1 : (8 - day);
   d.setDate(d.getDate() + diff);
   return d;
 }
@@ -1856,10 +1857,19 @@ function closeExportModal() {
 }
 
 function generateICS(selectedEvents, startMonday, abStart, repeatWeeks, tzid) {
+  // Escape special characters per RFC 5545
+  function icsEscape(str) {
+    return String(str)
+      .replace(/\\/g, '\\\\')
+      .replace(/;/g, '\\;')
+      .replace(/,/g, '\\,')
+      .replace(/\n/g, '\\n');
+  }
+
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//courseview//EN',
+    'PRODID:-//CourseView//CourseView Calendar Export//EN',
     'CALSCALE:GREGORIAN',
     `BEGIN:VTIMEZONE`,
     `TZID:${tzid}`,
@@ -1886,7 +1896,7 @@ function generateICS(selectedEvents, startMonday, abStart, repeatWeeks, tzid) {
       rrule = `RRULE:FREQ=WEEKLY;COUNT=${repeatWeeks}`;
     }
 
-    const uid = `courseview-${Date.now()}-${++uidCounter}@courseview`;
+    const uid = `courseview-${Date.now()}-${++uidCounter}-${Math.random().toString(36).slice(2, 9)}@courseview`;
     const dtStart = formatICSDateTime(eventDate, ev.timeStart);
     const dtEnd   = formatICSDateTime(eventDate, ev.timeEnd);
 
@@ -1899,9 +1909,9 @@ function generateICS(selectedEvents, startMonday, abStart, repeatWeeks, tzid) {
     lines.push(`UID:${uid}`);
     lines.push(`DTSTART;TZID=${tzid}:${dtStart}`);
     lines.push(`DTEND;TZID=${tzid}:${dtEnd}`);
-    lines.push(`SUMMARY:${ev.title}`);
-    lines.push(`LOCATION:${ev.room}`);
-    lines.push(`DESCRIPTION:${description}`);
+    lines.push(`SUMMARY:${icsEscape(ev.title)}`);
+    lines.push(`LOCATION:${icsEscape(ev.room)}`);
+    lines.push(`DESCRIPTION:${icsEscape(description)}`);
     lines.push(rrule);
     lines.push('END:VEVENT');
   }
