@@ -664,7 +664,9 @@ body {
     <h2>📤 Export to Calendar</h2>
     <div id="export-no-courses">No courses selected. Please check some courses in the sidebar first.</div>
     <ul id="export-course-list"></ul>
-    <div id="export-block-warning">⚠️ Some block events are not included in the export, as they have no fixed weekly time slot.</div>
+    <div id="export-block-warning">⚠️ The following selected courses are block events with no fixed weekly time slot and are not included in the export:
+      <ul id="export-block-list" style="margin:4px 0 0 16px;padding:0;"></ul>
+    </div>
     <p class="export-note">Custom events are not included. It's expected that your own custom events will already be in your calendar.</p>
     <div class="form-row">
       <label for="export-start-date">First Monday of semester</label>
@@ -1789,8 +1791,8 @@ function openExportModal() {
     });
   }
 
-  // Check for block events among checked courses
-  let hasBlockEvents = false;
+  // Collect block events among checked courses
+  const blockEventNames = [];
   if (coursesData) {
     for (const mod of coursesData.modules) {
       for (const course of mod.courses) {
@@ -1799,12 +1801,15 @@ function openExportModal() {
           : [course.id];
         const isChecked = ids.some(id => checkedState[id]);
         if (!isChecked) continue;
-        for (const slot of course.slots) {
-          if (slot.isBlockEvent) { hasBlockEvents = true; break; }
+        const hasBlock = course.slots.some(s => s.isBlockEvent);
+        if (hasBlock) {
+          const courseLabel = course.title || course.type || course.id;
+          const name = (mod.name && mod.name !== courseLabel)
+            ? `${mod.name} – ${courseLabel}`
+            : courseLabel;
+          if (!blockEventNames.includes(name)) blockEventNames.push(name);
         }
-        if (hasBlockEvents) break;
       }
-      if (hasBlockEvents) break;
     }
   }
 
@@ -1836,7 +1841,19 @@ function openExportModal() {
     dlBtn.disabled = false;
   }
 
-  document.getElementById('export-block-warning').style.display = hasBlockEvents ? 'block' : 'none';
+  const blockWarning = document.getElementById('export-block-warning');
+  const blockList    = document.getElementById('export-block-list');
+  blockList.innerHTML = '';
+  if (blockEventNames.length > 0) {
+    blockEventNames.forEach(name => {
+      const li = document.createElement('li');
+      li.textContent = name;
+      blockList.appendChild(li);
+    });
+    blockWarning.style.display = 'block';
+  } else {
+    blockWarning.style.display = 'none';
+  }
   document.getElementById('export-ab-row').style.display = hasAB ? '' : 'none';
 
   // Pre-fill date to next Monday
