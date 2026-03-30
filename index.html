@@ -683,6 +683,7 @@ body {
     <div class="form-row">
       <label for="export-weeks">Number of weeks to repeat</label>
       <input type="number" id="export-weeks" value="18" min="1" max="52">
+      <small id="export-weeks-info" style="color:#999;font-size:11px;"></small>
     </div>
     <div class="form-row">
       <label for="export-tz">Timezone</label>
@@ -1743,13 +1744,25 @@ function formatDateInput(d) {
   return `${y}-${m}-${day}`;
 }
 
-// Format a Date + time string (HH:MM) as YYYYMMDDTHHmmss (local-wall-clock)
-function formatICSDateTime(date, timeStr) {
-  const y = date.getFullYear();
-  const mo = String(date.getMonth() + 1).padStart(2, '0');
-  const d = String(date.getDate()).padStart(2, '0');
+// Return { year, month, day } string parts for a Date in a specific IANA time zone
+function getYMDForTimeZone(date, timeZone) {
+  const fmt = new Intl.DateTimeFormat('en-CA', {
+    timeZone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  });
+  const parts = fmt.formatToParts(date);
+  const lookup = {};
+  for (const p of parts) lookup[p.type] = p.value;
+  return { year: lookup.year, month: lookup.month, day: lookup.day };
+}
+
+// Format a Date + time string (HH:MM) as YYYYMMDDTHHmmss in the given IANA tzid
+function formatICSDateTime(date, timeStr, tzid) {
+  const { year, month, day } = getYMDForTimeZone(date, tzid);
   const [h, mi] = timeStr.split(':');
-  return `${y}${mo}${d}T${h.padStart(2,'0')}${mi.padStart(2,'0')}00`;
+  return `${year}${month}${day}T${h.padStart(2,'0')}${mi.padStart(2,'0')}00`;
 }
 
 // Add N days to a Date (returns new Date)
@@ -1866,6 +1879,8 @@ function openExportModal() {
   // Store events for download
   document.getElementById('export-modal-overlay')._exportEvents = exportEvents;
 
+  updateWeeksEndInfo();
+
   document.getElementById('export-modal-overlay').classList.add('open');
 }
 
@@ -1883,14 +1898,14 @@ function generateICS(selectedEvents, startMonday, abStart, repeatWeeks, tzid) {
       .replace(/\n/g, '\\n');
   }
 
+  // DTSTAMP: current moment in UTC, formatted as YYYYMMDDTHHmmssZ
+  const dtstamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
+
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//CourseView//CourseView Calendar Export//EN',
     'CALSCALE:GREGORIAN',
-    `BEGIN:VTIMEZONE`,
-    `TZID:${tzid}`,
-    'END:VTIMEZONE',
   ];
 
   let uidCounter = 0;
@@ -1906,7 +1921,7 @@ function generateICS(selectedEvents, startMonday, abStart, repeatWeeks, tzid) {
       const startsWeek1 = (ev.weekPattern === abStart);
       const weekShift = startsWeek1 ? 0 : 7;
       eventDate = addDays(startMonday, weekShift + dayOffset);
-      const count = Math.ceil(repeatWeeks / 2);
+      const count = startsWeek1 ? Math.ceil(repeatWeeks / 2) : Math.floor(repeatWeeks / 2);
       rrule = `RRULE:FREQ=WEEKLY;INTERVAL=2;COUNT=${count}`;
     } else {
       eventDate = addDays(startMonday, dayOffset);
@@ -1914,8 +1929,8 @@ function generateICS(selectedEvents, startMonday, abStart, repeatWeeks, tzid) {
     }
 
     const uid = `courseview-${Date.now()}-${++uidCounter}-${Math.random().toString(36).slice(2, 9)}@courseview`;
-    const dtStart = formatICSDateTime(eventDate, ev.timeStart);
-    const dtEnd   = formatICSDateTime(eventDate, ev.timeEnd);
+    const dtStart = formatICSDateTime(eventDate, ev.timeStart, tzid);
+    const dtEnd   = formatICSDateTime(eventDate, ev.timeEnd, tzid);
 
     const descParts = [];
     if (ev.moduleName) descParts.push(ev.moduleName);
@@ -1924,6 +1939,7 @@ function generateICS(selectedEvents, startMonday, abStart, repeatWeeks, tzid) {
 
     lines.push('BEGIN:VEVENT');
     lines.push(`UID:${uid}`);
+    lines.push(`DTSTAMP:${dtstamp}`);
     lines.push(`DTSTART;TZID=${tzid}:${dtStart}`);
     lines.push(`DTEND;TZID=${tzid}:${dtEnd}`);
     lines.push(`SUMMARY:${icsEscape(ev.title)}`);
@@ -1936,6 +1952,23 @@ function generateICS(selectedEvents, startMonday, abStart, repeatWeeks, tzid) {
   lines.push('END:VCALENDAR');
   return lines.join('\r\n');
 }
+
+// Update the "last event on …" hint below the weeks input
+function updateWeeksEndInfo() {
+  const info = document.getElementById('export-weeks-info');
+  if (!info) return;
+  const dateVal = document.getElementById('export-start-date').value;
+  const weeks   = parseInt(document.getElementById('export-weeks').value, 10);
+  if (!dateVal || !weeks || weeks < 1) { info.textContent = ''; return; }
+  const [y, mo, d] = dateVal.split('-').map(Number);
+  const lastMonday = new Date(y, mo - 1, d + (weeks - 1) * 7);
+  const lastFriday = new Date(lastMonday);
+  lastFriday.setDate(lastMonday.getDate() + 4);
+  info.textContent = `Last week: ${lastMonday.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })} – ${lastFriday.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}`;
+}
+
+document.getElementById('export-start-date').addEventListener('input', updateWeeksEndInfo);
+document.getElementById('export-weeks').addEventListener('input', updateWeeksEndInfo);
 
 document.getElementById('btn-export').addEventListener('click', openExportModal);
 
@@ -1953,13 +1986,18 @@ document.getElementById('export-download-btn').addEventListener('click', () => {
   const dateVal = document.getElementById('export-start-date').value;
   if (!dateVal) { alert('Please pick a start date.'); return; }
 
-  // Parse the selected date as midnight UTC then treat as local start of day
+  // Parse the selected date as local calendar day at local midnight
   const [y, mo, d] = dateVal.split('-').map(Number);
   const startMonday = new Date(y, mo - 1, d);
 
-  const abStart  = document.getElementById('export-ab-start').value;
-  const weeks    = parseInt(document.getElementById('export-weeks').value, 10) || 18;
-  const tzid     = document.getElementById('export-tz').value.trim() || 'UTC';
+  const abStart = document.getElementById('export-ab-start').value;
+  const weeks   = parseInt(document.getElementById('export-weeks').value, 10) || 18;
+
+  // Sanitize tzid: only allow characters valid in IANA timezone names
+  const rawTzid = document.getElementById('export-tz').value.trim();
+  const tzid = /^[A-Za-z0-9_+\-/]+$/.test(rawTzid)
+    ? rawTzid
+    : Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   const icsContent = generateICS(selectedEvents, startMonday, abStart, weeks, tzid);
 
