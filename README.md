@@ -12,6 +12,7 @@ link: https://nunq.github.io/courseview/
 - customize each course's colors
 - clicking on an event in the calendar highlights it in the course list
 - add your own custom events into the schedule (also persisted)
+- export the selected courses as an `ics` file which can be imported into any calendar
 - get suggestions on which days to go to work instead of uni (brute forces the minimum number of conflicts with the selected courses)
 - for zoom, just use your browser's zoom `ctrl +`
 
