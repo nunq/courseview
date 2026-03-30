@@ -445,6 +445,67 @@ body {
 @media (max-width: 768px) {
   #mobile-warning { display: flex; }
 }
+
+/* ===== EXPORT MODAL ===== */
+#export-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+#export-modal-overlay.open { display: flex; }
+#export-modal {
+  background: #fff;
+  border-radius: 8px;
+  width: 480px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+#export-modal h2 { font-size: 16px; margin-bottom: 14px; color: #2c3e50; }
+#export-course-list {
+  list-style: none;
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+#export-course-list li { padding: 3px 0; border-bottom: 1px solid #f0f0f0; }
+#export-course-list li:last-child { border-bottom: none; }
+#export-block-warning {
+  display: none;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #7a5c00;
+  margin-bottom: 8px;
+}
+#export-no-courses {
+  display: none;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 8px;
+}
+.export-note {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 10px;
+}
+#export-download-btn { background: #3498db; color: #fff; }
+#export-download-btn:hover { background: #2980b9; }
+#export-download-btn:disabled { background: #a0c4e0; cursor: not-allowed; }
+#export-cancel-btn { background: #ecf0f1; color: #444; }
+#export-cancel-btn:hover { background: #dde1e7; }
 </style>
 </head>
 <body>
@@ -470,6 +531,7 @@ body {
   </div>
   <button id="btn-select-all">Select All Modules</button>
   <button id="btn-deselect-all">Select None</button>
+  <button id="btn-export">📤 Export</button>
 </div>
 
 <!-- Main layout -->
@@ -595,6 +657,42 @@ body {
 
 <!-- Tooltip -->
 <div id="fc-tooltip"></div>
+
+<!-- Export modal -->
+<div id="export-modal-overlay">
+  <div id="export-modal">
+    <h2>📤 Export to Calendar</h2>
+    <div id="export-no-courses">No courses selected. Please check some courses in the sidebar first.</div>
+    <ul id="export-course-list"></ul>
+    <div id="export-block-warning">⚠️ Some block events are not included in the export, as they have no fixed weekly time slot.</div>
+    <p class="export-note">Custom events are not included. It's expected that your own custom events will already be in your calendar.</p>
+    <div class="form-row">
+      <label for="export-start-date">First Monday of semester</label>
+      <input type="date" id="export-start-date">
+      <small style="color:#999;font-size:11px;">Pick the Monday of the first week of your semester.</small>
+    </div>
+    <div class="form-row" id="export-ab-row" style="display:none;">
+      <label for="export-ab-start">Starting week type</label>
+      <select id="export-ab-start">
+        <option value="A">Week A (first week is an A-week)</option>
+        <option value="B">Week B (first week is a B-week)</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="export-weeks">Number of weeks to repeat</label>
+      <input type="number" id="export-weeks" value="18" min="1" max="52">
+    </div>
+    <div class="form-row">
+      <label for="export-tz">Timezone</label>
+      <input type="text" id="export-tz">
+      <small style="color:#999;font-size:11px;">Used for event times in the exported file.</small>
+    </div>
+    <div class="modal-actions">
+      <button id="export-download-btn">Download .ics</button>
+      <button id="export-cancel-btn">Cancel</button>
+    </div>
+  </div>
+</div>
 
 <script>
 'use strict';
@@ -1619,6 +1717,237 @@ async function bootstrap() {
 }
 
 document.addEventListener('DOMContentLoaded', bootstrap);
+
+/* =====================================================================
+   EXPORT FEATURE
+   ===================================================================== */
+
+// Compute the next Monday from a given date (or today if already Monday)
+function nextMonday(fromDate) {
+  const d = new Date(fromDate);
+  d.setHours(0, 0, 0, 0);
+  const day = d.getDay(); // 0=Sun,1=Mon,...
+  const diff = day === 1 ? 0 : (8 - day) % 7 || 7;
+  d.setDate(d.getDate() + diff);
+  return d;
+}
+
+// Format a Date as YYYY-MM-DD for <input type="date">
+function formatDateInput(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+// Format a Date + time string (HH:MM) as YYYYMMDDTHHmmss (local-wall-clock)
+function formatICSDateTime(date, timeStr) {
+  const y = date.getFullYear();
+  const mo = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  const [h, mi] = timeStr.split(':');
+  return `${y}${mo}${d}T${h.padStart(2,'0')}${mi.padStart(2,'0')}00`;
+}
+
+// Add N days to a Date (returns new Date)
+function addDays(date, n) {
+  const d = new Date(date);
+  d.setDate(d.getDate() + n);
+  return d;
+}
+
+const ALL_DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+
+function openExportModal() {
+  // Collect parsed events
+  const fcEvents = buildParsedEvents();
+
+  // Deduplicate by (title, day, timeStart, timeEnd, weekPattern)
+  const seen = new Set();
+  const exportEvents = [];
+  for (const ev of fcEvents) {
+    const dateStr = ev.start.slice(0, 10);
+    const offset = Math.round((new Date(dateStr) - new Date(REFERENCE_MONDAY)) / 86400000);
+    const day = ALL_DAYS[offset] || null;
+    if (!day) continue;
+    const timeStart = ev.start.slice(11, 16);
+    const timeEnd   = ev.end ? ev.end.slice(11, 16) : '';
+    const weekPattern = ev.extendedProps.weekPattern || '';
+    const key = `${ev.title}|${day}|${timeStart}|${timeEnd}|${weekPattern}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    exportEvents.push({
+      title: ev.title,
+      day,
+      timeStart,
+      timeEnd,
+      room: ev.extendedProps.room || '',
+      moduleName: ev.extendedProps.moduleName || '',
+      lecturers: ev.extendedProps.lecturers || [],
+      weekPattern,
+    });
+  }
+
+  // Check for block events among checked courses
+  let hasBlockEvents = false;
+  if (coursesData) {
+    for (const mod of coursesData.modules) {
+      for (const course of mod.courses) {
+        const ids = course.hasMultipleSlotGroups
+          ? [...new Set(course.slots.map(s => `${course.id}-grp-${s.slotGroup || '_'}`))]
+          : [course.id];
+        const isChecked = ids.some(id => checkedState[id]);
+        if (!isChecked) continue;
+        for (const slot of course.slots) {
+          if (slot.isBlockEvent) { hasBlockEvents = true; break; }
+        }
+        if (hasBlockEvents) break;
+      }
+      if (hasBlockEvents) break;
+    }
+  }
+
+  // Check if any A/B events
+  const hasAB = exportEvents.some(e => e.weekPattern === 'A' || e.weekPattern === 'B');
+
+  // Populate course list
+  const ul = document.getElementById('export-course-list');
+  ul.innerHTML = '';
+  const dayShort = { monday:'Mon', tuesday:'Tue', wednesday:'Wed', thursday:'Thu', friday:'Fri' };
+  for (const ev of exportEvents) {
+    const li = document.createElement('li');
+    let label = `${ev.title} — ${dayShort[ev.day] || ev.day} ${ev.timeStart}–${ev.timeEnd}`;
+    if (ev.weekPattern === 'A') label += ' (Week A)';
+    else if (ev.weekPattern === 'B') label += ' (Week B)';
+    li.textContent = label;
+    ul.appendChild(li);
+  }
+
+  const noCourses = document.getElementById('export-no-courses');
+  const dlBtn     = document.getElementById('export-download-btn');
+  if (exportEvents.length === 0) {
+    noCourses.style.display = 'block';
+    ul.style.display = 'none';
+    dlBtn.disabled = true;
+  } else {
+    noCourses.style.display = 'none';
+    ul.style.display = '';
+    dlBtn.disabled = false;
+  }
+
+  document.getElementById('export-block-warning').style.display = hasBlockEvents ? 'block' : 'none';
+  document.getElementById('export-ab-row').style.display = hasAB ? '' : 'none';
+
+  // Pre-fill date to next Monday
+  const nm = nextMonday(new Date());
+  document.getElementById('export-start-date').value = formatDateInput(nm);
+
+  // Pre-fill timezone
+  document.getElementById('export-tz').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  // Store events for download
+  document.getElementById('export-modal-overlay')._exportEvents = exportEvents;
+
+  document.getElementById('export-modal-overlay').classList.add('open');
+}
+
+function closeExportModal() {
+  document.getElementById('export-modal-overlay').classList.remove('open');
+}
+
+function generateICS(selectedEvents, startMonday, abStart, repeatWeeks, tzid) {
+  const lines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//courseview//EN',
+    'CALSCALE:GREGORIAN',
+    `BEGIN:VTIMEZONE`,
+    `TZID:${tzid}`,
+    'END:VTIMEZONE',
+  ];
+
+  let uidCounter = 0;
+  for (const ev of selectedEvents) {
+    const dayOffset = DAY_OFFSETS[ev.day];
+    if (dayOffset === undefined) continue;
+
+    let eventDate;
+    let rrule;
+
+    if (ev.weekPattern === 'A' || ev.weekPattern === 'B') {
+      // A/B biweekly
+      const startsWeek1 = (ev.weekPattern === abStart);
+      const weekShift = startsWeek1 ? 0 : 7;
+      eventDate = addDays(startMonday, weekShift + dayOffset);
+      const count = Math.ceil(repeatWeeks / 2);
+      rrule = `RRULE:FREQ=WEEKLY;INTERVAL=2;COUNT=${count}`;
+    } else {
+      eventDate = addDays(startMonday, dayOffset);
+      rrule = `RRULE:FREQ=WEEKLY;COUNT=${repeatWeeks}`;
+    }
+
+    const uid = `courseview-${Date.now()}-${++uidCounter}@courseview`;
+    const dtStart = formatICSDateTime(eventDate, ev.timeStart);
+    const dtEnd   = formatICSDateTime(eventDate, ev.timeEnd);
+
+    const descParts = [];
+    if (ev.moduleName) descParts.push(ev.moduleName);
+    if (ev.lecturers && ev.lecturers.length) descParts.push(ev.lecturers.join(', '));
+    const description = descParts.join(' | ');
+
+    lines.push('BEGIN:VEVENT');
+    lines.push(`UID:${uid}`);
+    lines.push(`DTSTART;TZID=${tzid}:${dtStart}`);
+    lines.push(`DTEND;TZID=${tzid}:${dtEnd}`);
+    lines.push(`SUMMARY:${ev.title}`);
+    lines.push(`LOCATION:${ev.room}`);
+    lines.push(`DESCRIPTION:${description}`);
+    lines.push(rrule);
+    lines.push('END:VEVENT');
+  }
+
+  lines.push('END:VCALENDAR');
+  return lines.join('\r\n');
+}
+
+document.getElementById('btn-export').addEventListener('click', openExportModal);
+
+document.getElementById('export-cancel-btn').addEventListener('click', closeExportModal);
+
+document.getElementById('export-modal-overlay').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('export-modal-overlay')) closeExportModal();
+});
+
+document.getElementById('export-download-btn').addEventListener('click', () => {
+  const overlay = document.getElementById('export-modal-overlay');
+  const selectedEvents = overlay._exportEvents || [];
+  if (!selectedEvents.length) return;
+
+  const dateVal = document.getElementById('export-start-date').value;
+  if (!dateVal) { alert('Please pick a start date.'); return; }
+
+  // Parse the selected date as midnight UTC then treat as local start of day
+  const [y, mo, d] = dateVal.split('-').map(Number);
+  const startMonday = new Date(y, mo - 1, d);
+
+  const abStart  = document.getElementById('export-ab-start').value;
+  const weeks    = parseInt(document.getElementById('export-weeks').value, 10) || 18;
+  const tzid     = document.getElementById('export-tz').value.trim() || 'UTC';
+
+  const icsContent = generateICS(selectedEvents, startMonday, abStart, weeks, tzid);
+
+  const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'courseview-schedule.ics';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  closeExportModal();
+});
 </script>
 </body>
 </html>
