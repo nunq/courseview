@@ -1,4 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#   "beautifulsoup4>=4.12",
+#   "lxml>=5",
+# ]
+# ///
 """
 parse.py — Parse a study schedule HTML file into a courses JSON file.
 """
@@ -46,6 +53,14 @@ def parse_day(raw: str):
 def is_date(s: str) -> bool:
     """Detect DD.MM.YYYY style dates used for block events."""
     return bool(re.match(r"^\d{2}\.\d{2}\.\d{4}$", s.strip()))
+
+
+def module_id_for(module_number: str, module_name: str) -> str:
+    """Return a stable ID, including for modules without a source number."""
+    if module_number:
+        return module_number
+    slug = re.sub(r"[^a-z0-9]+", "-", module_name.lower()).strip("-")
+    return f"unnumbered-{slug}"
 
 
 def parse_slot(event_box):
@@ -122,7 +137,7 @@ def parse_course(cours_box, module_id, course_idx):
     }
 
 
-def parse_module(modul_div, semester):
+def parse_module(modul_div, semester, module_id):
     number_el = modul_div.select_one(".s-modul-number")
     title_el = modul_div.select_one(".s-modul-title")
     cat_el = modul_div.select_one(".s-modul-sg-category")
@@ -133,10 +148,10 @@ def parse_module(modul_div, semester):
 
     courses = []
     for idx, cb in enumerate(modul_div.select(".s-cours-box")):
-        courses.append(parse_course(cb, module_number, idx))
+        courses.append(parse_course(cb, module_id, idx))
 
     return {
-        "id": module_number,
+        "id": module_id,
         "number": module_number,
         "name": module_name,
         "category": category,
@@ -317,6 +332,7 @@ def main():
                 title_el = modul_div.select_one(".s-modul-title")
                 module_id = text(number_el)
                 module_name = text(title_el)
+                module_id = module_id_for(module_id, module_name)
                 if module_id in seen_ids:
                     print(
                         f'  [dedup] {module_id}  "{module_name}"  '
@@ -325,7 +341,7 @@ def main():
                     duplicate_ids.append(module_id)
                     continue
                 seen_ids[module_id] = semester
-                mod = parse_module(modul_div, semester)
+                mod = parse_module(modul_div, semester, module_id)
                 modules.append(mod)
     else:
         print("No semester sections found. Attempting to parse TABLE format...")

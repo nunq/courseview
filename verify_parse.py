@@ -1,10 +1,17 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#   "beautifulsoup4>=4.12",
+#   "lxml>=5",
+# ]
+# ///
 """
 verify_parse.py — Audit a parsed JSON file against its source HTML.
 
 Usage:
-    python3 verify_parse.py -i "Master Informatik.html" -o datasets/courses_ma_ss26.json
-    python3 verify_parse.py -i "Bachelor Informatik.html" -o datasets/courses_ba_ss26.json
+    uv run verify_parse.py -i "Master Informatik.html" -o datasets/courses_inf-ma_ws26.json
+    uv run verify_parse.py -i "Bachelor Informatik.html" -o datasets/courses_inf-ba_ss26.json
 """
 
 import argparse
@@ -33,6 +40,14 @@ def t(el):
 
 def is_date(s):
     return bool(re.match(r"^\d{2}\.\d{2}\.\d{4}$", s.strip()))
+
+
+def module_id_for(module_number, module_name):
+    """Mirror parse.py's stable fallback for unnumbered modules."""
+    if module_number:
+        return module_number
+    slug = re.sub(r"[^a-z0-9]+", "-", module_name.lower()).strip("-")
+    return f"unnumbered-{slug}"
 
 
 def main():
@@ -70,16 +85,25 @@ def main():
     # ── 2. Per-module field audit ─────────────────────────────────────────────
     print("=== Per-module audit ===")
     audited_modules = 0
+    audited_ids = set()
     for sem_div in soup.select("div.n-studgang-semester"):
         for modul_div in sem_div.select("div.MODUL.s-column-container"):
             mod_num = t(modul_div.select_one(".s-modul-number"))
-            if mod_num not in modules_json:
+            mod_name = t(modul_div.select_one(".s-modul-title"))
+            mod_id = module_id_for(mod_num, mod_name)
+            if mod_id in audited_ids:
                 continue  # deduplicated occurrence — skip
+            audited_ids.add(mod_id)
+            if mod_id not in modules_json:
+                issues.append(
+                    f"MISSING MODULE [{mod_id}]: present in HTML but absent from JSON"
+                )
+                continue
             audited_modules += 1
-            mod_json = modules_json[mod_num]
+            mod_json = modules_json[mod_id]
 
             # Name
-            name_html = t(modul_div.select_one(".s-modul-title"))
+            name_html = mod_name
             if name_html != mod_json["name"]:
                 issues.append(f"NAME MISMATCH [{mod_num}]:\n    HTML: '{name_html}'\n    JSON: '{mod_json['name']}'")
 
