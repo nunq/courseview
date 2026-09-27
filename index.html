@@ -37,16 +37,26 @@ body {
 }
 #topbar h1 { font-size: 16px; font-weight: 600; }
 #dataset-select {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.3);
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 4px;
+  color-scheme: light;
+  background: #fff;
+  border: 1px solid #d5dde5;
+  color: #243447;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font: inherit;
   font-size: 12px;
+  line-height: 1.3;
   cursor: pointer;
-  max-width: 220px;
+  width: min(310px, 30vw);
+  min-width: 210px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
 }
-#dataset-select option { background: #2c3e50; color: #fff; }
+#dataset-select:hover { border-color: #aebdca; }
+#dataset-select:focus-visible {
+  outline: 2px solid #64a8eb;
+  outline-offset: 2px;
+}
+#dataset-select option { background: #fff; color: #243447; }
 #generated-label {
   font-size: 11px;
   opacity: 0.55;
