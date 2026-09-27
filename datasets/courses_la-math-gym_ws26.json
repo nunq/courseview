@@ -1,0 +1,821 @@
+{
+  "_generated": "2026-09-27T17:28:44Z",
+  "modules": [
+    {
+      "id": "10-MAT-LA23",
+      "number": "10-MAT-LA23",
+      "name": "Lineare Algebra 1 [für Lehramt und Diplom Mathematik + Rest]",
+      "category": "Pflichtmodul",
+      "semester": 1,
+      "courses": [
+        {
+          "id": "10-MAT-LA23-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Lineare Algebra 1",
+          "lecturers": [
+            "Grabowski, Łukasz"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA23-Übung-1",
+          "type": "Übung",
+          "title": "Lineare Algebra 1",
+          "lecturers": [
+            "Kliem, Sandra"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Augusteum, A-314",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "f",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "g",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA23-Vorlesung_mit_integrierter_Übung-2",
+          "type": "Vorlesung mit integrierter Übung",
+          "title": "Schulmathematik vom höheren Standpunkt",
+          "lecturers": [
+            "Vargyas, Emese-Tünde"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": "A",
+              "timeStart": "07:30",
+              "timeEnd": "09:00",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-LA24",
+      "number": "10-MAT-LA24",
+      "name": "Analysis 1 [für Lehramt und Diplom Mathe + Rest]",
+      "category": "Pflichtmodul",
+      "semester": 3,
+      "courses": [
+        {
+          "id": "10-MAT-LA24-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Analysis 1",
+          "lecturers": [
+            "Pogorzelski, Felix Heinrich"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA24-Übung-1",
+          "type": "Übung",
+          "title": "Analysis 1",
+          "lecturers": [
+            "Kreidler, Henrik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Augusteum, A-314",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA24-Vorlesung_mit_integrierter_Übung-2",
+          "type": "Vorlesung mit integrierter Übung",
+          "title": "Schulmathematik vom höheren Standpunkt",
+          "lecturers": [
+            "Vargyas, Emese-Tünde"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": "A",
+              "timeStart": "07:30",
+              "timeEnd": "09:00",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-LA04",
+      "number": "10-MAT-LA04",
+      "name": "Grundkurs Didaktik der Mathematik",
+      "category": "Pflichtmodul",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-LA04-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Grundkurs Didaktik der Mathematik",
+          "lecturers": [
+            "Schöneburg-Lehnert, Silvia"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "07:30",
+              "timeEnd": "09:00",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA04-Übung-1",
+          "type": "Übung",
+          "title": "Grundkurs Didaktik der Mathematik",
+          "lecturers": [
+            "Rothe, Jennifer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-901",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-901",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-LA05",
+      "number": "10-MAT-LA05",
+      "name": "Schulpraktische Studien Mathematik II/III",
+      "category": "Pflichtmodul",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-LA05-Schulpraktische_Studien-0",
+          "type": "Schulpraktische Studien",
+          "title": "Mathematik II/III",
+          "lecturers": [
+            "Hintze, Steffen",
+            "Senfleben, Timo",
+            "Vargyas, Emese-Tünde",
+            "Wagler, Hubert"
+          ],
+          "additionalInfo": "Zeit und Ort noch offen",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA05-Seminar-1",
+          "type": "Seminar",
+          "title": "Schulpraktische Studien Mathematik II/III",
+          "lecturers": [
+            "Rothe, Jennifer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Augusteum, A-310, Mathe-Pool",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BH1802",
+      "number": "10-MAT-BH1802",
+      "name": "Wahrscheinlichkeitstheorie [Lehramt Mathematik (außer GS)]",
+      "category": "Pflichtmodul",
+      "semester": 7,
+      "courses": [
+        {
+          "id": "10-MAT-BH1802-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Wahrscheinlichkeitstheorie",
+          "lecturers": [
+            "Kliem, Sandra"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Audimax, Augustusplatz",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BH1802-Übung-1",
+          "type": "Übung",
+          "title": "Wahrscheinlichkeitstheorie",
+          "lecturers": [
+            "Stäbler, Axel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "f",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "g",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-LA06",
+      "number": "10-MAT-LA06",
+      "name": "Aufbaukurs Didaktik der Mathematik I",
+      "category": "Pflichtmodul",
+      "semester": 7,
+      "courses": [
+        {
+          "id": "10-MAT-LA06--0",
+          "type": "",
+          "title": "Didaktik der Arithmetik und elementaren Algebra",
+          "lecturers": [
+            "Schöneburg-Lehnert, Silvia"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Augusteum, A-310, Mathe-Pool",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Augusteum, A-310, Mathe-Pool",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Augusteum, A-310, Mathe-Pool",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA06-Vorlesung_mit_integrierter_Übung-1",
+          "type": "Vorlesung mit integrierter Übung",
+          "title": "Didaktik der Stochastik",
+          "lecturers": [
+            "Krohn, Thomas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "thursday",
+              "weekPattern": "B",
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Augusteum, A-310, Mathe-Pool",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "thursday",
+              "weekPattern": "B",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Augusteum, A-310, Mathe-Pool",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "thursday",
+              "weekPattern": "B",
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Augusteum, A-310, Mathe-Pool",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA06-Vorlesung_mit_integrierter_Übung-2",
+          "type": "Vorlesung mit integrierter Übung",
+          "title": "Einsatz neuer Medien im Mathematikunterricht",
+          "lecturers": [
+            "Krohn, Thomas"
+          ],
+          "additionalInfo": "ggf. Reserve alle Gruppen: 09.12., 16.12., 27.01., 03.02.",
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:00",
+              "timeEnd": "15:00",
+              "room": "Paulinum, P-901",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:00",
+              "timeEnd": "15:00",
+              "room": "Paulinum, P-901",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:00",
+              "timeEnd": "15:00",
+              "room": "Paulinum, P-901",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-LA07",
+      "number": "10-MAT-LA07",
+      "name": "Fachdidaktisches Blockpraktikum (SPS IV/V)",
+      "category": "Pflichtmodul",
+      "semester": 7,
+      "courses": [
+        {
+          "id": "10-MAT-LA07-Seminar-0",
+          "type": "Seminar",
+          "title": "Anseminar, Schwerpunktthema \"Begabtenförderung\"",
+          "lecturers": [
+            "Vargyas, Emese-Tünde"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA07-Seminar-1",
+          "type": "Seminar",
+          "title": "Anseminar, Schwerpunktthema \"Gestaltung digitaler Unterrichtsmaterialien\"",
+          "lecturers": [
+            "Senfleben, Timo"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Paulinum, P-901",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA07-Seminar-2",
+          "type": "Seminar",
+          "title": "Anseminar, Schwerpunktthema \"Rechenschwäche\"",
+          "lecturers": [
+            "Dögnitz, Susanne"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Augusteum, A-310, Mathe-Pool",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA07-Seminar-3",
+          "type": "Seminar",
+          "title": "Anseminar, Schwerpunktthema \"Sprachsensibler Mathematikunterricht\"",
+          "lecturers": [
+            "Dögnitz, Susanne"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Paulinum, P-901",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA07-Schulpraktische_Studien-4",
+          "type": "Schulpraktische Studien",
+          "title": "Fachdidaktisches Blockpraktikum",
+          "lecturers": [
+            "Hintze, Steffen",
+            "Krohn, Thomas",
+            "Rothe, Jennifer",
+            "Schöneburg-Lehnert, Silvia"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-LA26",
+      "number": "10-MAT-LA26",
+      "name": "Mathematik in Schule und Hochschule [für Gymnasium und BBS]",
+      "category": "Pflichtmodul",
+      "semester": 9,
+      "courses": [
+        {
+          "id": "10-MAT-LA26-Seminar-0",
+          "type": "Seminar",
+          "title": "Elementare Zahlentheorie",
+          "lecturers": [
+            "Finis, Tobias"
+          ],
+          "additionalInfo": "More information at: https://stdplan.informatik.uni-leipzig.de/modules/AnkuendigungElementareZahlentheorieWS202627.pdf",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Augusteum, A-314",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA26-Seminar-1",
+          "type": "Seminar",
+          "title": "Fraktale Geometrie",
+          "lecturers": [
+            "Schwarz, Matthias"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "b",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA26-Seminar-2",
+          "type": "Seminar",
+          "title": "Schulmathematische Inhalte der Sekundarstufe 2, Schwerpunktthema: Didaktik der Analysis",
+          "lecturers": [
+            "Hintze, Steffen"
+          ],
+          "additionalInfo": "für Studierende, die Didaktik der Analysis noch nicht belegt haben",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Paulinum, P-901",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-LA26-Seminar-3",
+          "type": "Seminar",
+          "title": "Schulmathematische Inhalte der Sekundarstufe 2, Schwerpunktthema: Didaktik der Analytischen\n                                                         Geometrie und Linearen Algebra",
+          "lecturers": [
+            "Hintze, Steffen"
+          ],
+          "additionalInfo": "für Studierende, die Didaktik der Analytischen Geometrie und Linearen Algebra noch\n                                                         nicht belegt haben",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "b",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Paulinum, P-901",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

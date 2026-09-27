@@ -1,0 +1,1115 @@
+{
+  "_generated": "2026-09-27T17:28:44Z",
+  "modules": [
+    {
+      "id": "10-MAT-BM001",
+      "number": "10-MAT-BM001",
+      "name": "Analysis 1 [für B.Sc. Mathematik]",
+      "category": "Pflichtmodul",
+      "semester": 1,
+      "courses": [
+        {
+          "id": "10-MAT-BM001-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Analysis 1",
+          "lecturers": [
+            "Pogorzelski, Felix Heinrich"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM001-Übung-1",
+          "type": "Übung",
+          "title": "Analysis 1",
+          "lecturers": [
+            "Kreidler, Henrik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Augusteum, A-314",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM001-Übung-2",
+          "type": "Übung",
+          "title": "Hörsaalübung Analysis 1",
+          "lecturers": [
+            "Kreidler, Henrik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM003",
+      "number": "10-MAT-BM003",
+      "name": "Lineare Algebra 1 [für B.Sc. Mathematik]",
+      "category": "Pflichtmodul",
+      "semester": 1,
+      "courses": [
+        {
+          "id": "10-MAT-BM003-Übung-0",
+          "type": "Übung",
+          "title": "Hörsaalübung Lineare Algebra 1",
+          "lecturers": [
+            "Hulsbergen, Pepijn"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM003-Vorlesung-1",
+          "type": "Vorlesung",
+          "title": "Lineare Algebra 1",
+          "lecturers": [
+            "Grabowski, Łukasz"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 1",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM003-Übung-2",
+          "type": "Übung",
+          "title": "Lineare Algebra 1",
+          "lecturers": [
+            "Kliem, Sandra"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-11",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Augusteum, A-314",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "d",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "e",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "f",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "g",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM005",
+      "number": "10-MAT-BM005",
+      "name": "Algebra 1",
+      "category": "Pflichtmodul",
+      "semester": 3,
+      "courses": [
+        {
+          "id": "10-MAT-BM005-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Algebra 1",
+          "lecturers": [
+            "Grabowski, Łukasz"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM005-Übung-1",
+          "type": "Übung",
+          "title": "Algebra 1",
+          "lecturers": [
+            "Dietzschold, Johannes"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 2-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM005--2",
+          "type": "",
+          "title": "Overview of linear algebra",
+          "lecturers": [
+            "???"
+          ],
+          "additionalInfo": "Moodle-Kurs unter: https://moodle2.uni-leipzig.de/course/view.php?id=56292",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM006",
+      "number": "10-MAT-BM006",
+      "name": "Einführung in die Programmierung",
+      "category": "Pflichtmodul",
+      "semester": 3,
+      "courses": [
+        {
+          "id": "10-MAT-BM006-Übung-0",
+          "type": "Übung",
+          "title": "Einführung in die Programmierung",
+          "lecturers": [
+            "Hellmund, Meik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": "A",
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM006-Praktikum-1",
+          "type": "Praktikum",
+          "title": "Einführung in die Programmierung",
+          "lecturers": [
+            "Hellmund, Meik"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM007",
+      "number": "10-MAT-BM007",
+      "name": "Maß- und Integrationstheorie",
+      "category": "Pflichtmodul",
+      "semester": 3,
+      "courses": [
+        {
+          "id": "10-MAT-BM007-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Maß- und Integrationstheorie",
+          "lecturers": [
+            "Hirsch, Jonas"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Hs 4",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM007-Übung-1",
+          "type": "Übung",
+          "title": "Maß- und Integrationstheorie",
+          "lecturers": [
+            "Becker, Alexander"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM007--2",
+          "type": "",
+          "title": "Overview of analysis",
+          "lecturers": [
+            "???"
+          ],
+          "additionalInfo": "Moodle-Kurs unter: https://moodle2.uni-leipzig.de/course/view.php?id=56451",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM102",
+      "number": "10-MAT-BM102",
+      "name": "Funktionentheorie",
+      "category": "Wahlpflichtbereich Gruppe A",
+      "semester": 3,
+      "courses": [
+        {
+          "id": "10-MAT-BM102-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Funktionentheorie",
+          "lecturers": [
+            "Brinkschulte, Judith"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM102-Übung-1",
+          "type": "Übung",
+          "title": "Funktionentheorie",
+          "lecturers": [
+            "Brinkschulte, Judith"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "friday",
+              "weekPattern": "A",
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12-PHY-BTP1",
+      "number": "12-PHY-BTP1",
+      "name": "Theoretische Physik 1 - Theoretische Mechanik",
+      "category": null,
+      "semester": 3,
+      "courses": [
+        {
+          "id": "12-PHY-BTP1-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Theoretische Physik 1",
+          "lecturers": [
+            "Verch, Rainer"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Physik, Th. Hs",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "12-PHY-BTP1-Übung-1",
+          "type": "Übung",
+          "title": "Theoretische Physik 1",
+          "lecturers": [
+            "Verch, Rainer"
+          ],
+          "additionalInfo": "scheduled if needed",
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Physik, SR 225",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Physik, SR 218",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "c",
+              "day": "friday",
+              "weekPattern": null,
+              "timeStart": "13:30",
+              "timeEnd": "15:00",
+              "room": "ITP, Brüderstraße 16, Raum 114",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-201-2315",
+      "number": "10-201-2315",
+      "name": "Foundations of Machine Learning",
+      "category": "Wahlpflichtbereich Gruppe B",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-201-2315-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Foundations of Machine Learning",
+          "lecturers": [
+            "Weißweiler, Leonie"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Hs 2",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-201-2315-Übung-1",
+          "type": "Übung",
+          "title": "Foundations of Machine Learning",
+          "lecturers": [
+            "Suchardt, Jacob Lee"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": true,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Hs 10",
+              "isBlockEvent": false,
+              "isOnline": false
+            },
+            {
+              "slotGroup": "b",
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "Hs 5",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM011",
+      "number": "10-MAT-BM011",
+      "name": "Bachelor Seminar Mathematics",
+      "category": "Pflichtmodul",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-BM011-Seminar-0",
+          "type": "Seminar",
+          "title": "Bachelorseminar Mathematik",
+          "lecturers": [
+            "???"
+          ],
+          "additionalInfo": "Studierenden müssen sich hinsichtlich Ablauf und Terminen an die jeweils betreuenden\n                                                         Professor:innen wenden",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": null,
+              "weekPattern": null,
+              "timeStart": null,
+              "timeEnd": null,
+              "room": null,
+              "isBlockEvent": false,
+              "isOnline": true
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM011-Seminar-1",
+          "type": "Seminar",
+          "title": "Forschungs-, Bachelor- und Masterseminar in der Numerik",
+          "lecturers": [
+            "Schedensack, Mira",
+            "Storn, Johannes"
+          ],
+          "additionalInfo": "nur für die Bachelorand:innen von Frau Schedensack",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "b",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "Paulinum, P-701",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM201",
+      "number": "10-MAT-BM201",
+      "name": "Projektpraktikum",
+      "category": "Praktikumsmodul",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-BM201--0",
+          "type": "",
+          "title": "Math and AI",
+          "lecturers": [
+            "Taha, Diaaeldin"
+          ],
+          "additionalInfo": "The date applies only to the first two sessions, on October 12th and 19th 2026. Further\n                                                         details will be announced during the seminar.",
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "b",
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 2-03",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM201-Praktikum-1",
+          "type": "Praktikum",
+          "title": "Projektpraktikum",
+          "lecturers": [
+            "Storn, Johannes"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": "a",
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Augusteum, A-312, Mathe-Pool",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM302",
+      "number": "10-MAT-BM302",
+      "name": "Functional Analysis 2",
+      "category": "Wahlpflichtbereich Gruppe A",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-BM302-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Functional Analysis 2",
+          "lecturers": [
+            "Eisner, Tatjana"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM302-Übung-1",
+          "type": "Übung",
+          "title": "Functional Analysis 2",
+          "lecturers": [
+            "Eisner, Tatjana"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM305",
+      "number": "10-MAT-BM305",
+      "name": "Partial Differential Equations 1",
+      "category": "Wahlpflichtbereich Gruppe A",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-BM305-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Partielle Differentialgleichungen 1",
+          "lecturers": [
+            "Widmayer, Klaus"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Paulinum, P-801",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM305-Übung-1",
+          "type": "Übung",
+          "title": "Partielle Differentialgleichungen 1",
+          "lecturers": [
+            "Cheng, Xiaopeng"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": null,
+              "timeStart": "17:15",
+              "timeEnd": "18:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM306",
+      "number": "10-MAT-BM306",
+      "name": "Special Topics in Applied Mathematics",
+      "category": "Wahlpflichtbereich Gruppe A",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-BM306-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Topics in Advanced Combinatorics",
+          "lecturers": [
+            "Kral, Daniel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "09:15",
+              "timeEnd": "10:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM306-Seminar-1",
+          "type": "Seminar",
+          "title": "Topics in Advanced Combinatorics",
+          "lecturers": [
+            "Kral, Daniel"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM307",
+      "number": "10-MAT-BM307",
+      "name": "Special Topics in Pure Mathematics",
+      "category": "Wahlpflichtbereich Gruppe A",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-BM307-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Introduction to Algebraic and Differential Topology",
+          "lecturers": [
+            "Brinkschulte, Judith"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "wednesday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM307-Seminar-1",
+          "type": "Seminar",
+          "title": "Introduction to Algebraic and Differential Topology",
+          "lecturers": [
+            "Brinkschulte, Judith"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-12",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM308",
+      "number": "10-MAT-BM308",
+      "name": "Numerical Analysis of Differential Equations",
+      "category": "Wahlpflichtbereich Gruppe A",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-BM308-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Numerical analysis of differential equations",
+          "lecturers": [
+            "Schedensack, Mira"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM308-Übung-1",
+          "type": "Übung",
+          "title": "Numerical analysis of differential equations",
+          "lecturers": [
+            "Schedensack, Mira"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "13:15",
+              "timeEnd": "14:45",
+              "room": "SG 3-14",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10-MAT-BM309",
+      "number": "10-MAT-BM309",
+      "name": "Mathematical Statistics",
+      "category": "Wahlpflichtbereich Gruppe A",
+      "semester": 5,
+      "courses": [
+        {
+          "id": "10-MAT-BM309-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Mathematical Statistics",
+          "lecturers": [
+            "Bufetov, Alexey"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Hs 19",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "10-MAT-BM309-Übung-1",
+          "type": "Übung",
+          "title": "Mathematical Statistics",
+          "lecturers": [
+            "Bufetov, Alexey"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "thursday",
+              "weekPattern": "A",
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-10",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMI-26W10",
+      "number": "FMI-26W10",
+      "name": "Spiele in Automatentheorie und Logik",
+      "category": null,
+      "semester": 5,
+      "courses": [
+        {
+          "id": "FMI-26W10-Vorlesung-0",
+          "type": "Vorlesung",
+          "title": "Games in Automata and Logic",
+          "lecturers": [
+            "Quaas, Karin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "tuesday",
+              "weekPattern": null,
+              "timeStart": "15:15",
+              "timeEnd": "16:45",
+              "room": "Felix-Klein-Hs, Paulinum",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        },
+        {
+          "id": "FMI-26W10-Übung-1",
+          "type": "Übung",
+          "title": "Games in Automata and Logic",
+          "lecturers": [
+            "Quaas, Karin"
+          ],
+          "additionalInfo": null,
+          "hasMultipleSlotGroups": false,
+          "slots": [
+            {
+              "slotGroup": null,
+              "day": "monday",
+              "weekPattern": null,
+              "timeStart": "11:15",
+              "timeEnd": "12:45",
+              "room": "SG 3-13",
+              "isBlockEvent": false,
+              "isOnline": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

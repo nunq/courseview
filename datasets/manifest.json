@@ -1,11 +1,27 @@
 [
   {
+    "label": "WS26/27 – Informatik – Master",
+    "url": "datasets/courses_inf-ma_ws26.json"
+  },
+  {
+    "label": "WS26/27 – Mathematik – Bachelor",
+    "url": "datasets/courses_ba-math_ws26.json"
+  },
+  {
+    "label": "WS26/27 – Informatik – Lehramt (Gym)",
+    "url": "datasets/courses_la-inf-gym_ws26.json"
+  },
+  {
+    "label": "WS26/27 – Mathematik – Lehramt (Gym)",
+    "url": "datasets/courses_la-math-gym_ws26.json"
+  },
+  {
     "label": "SS26 – Informatik – Master",
-    "url": "datasets/courses_ma_ss26.json"
+    "url": "datasets/courses_inf-ma_ss26.json"
   },
   {
     "label": "SS26 – Informatik – Bachelor",
-    "url": "datasets/courses_ba_ss26.json"
+    "url": "datasets/courses_inf-ba_ss26.json"
   },
   {
     "label": "SS26 – Informatik – Lehramt (Gym)",

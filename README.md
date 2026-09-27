@@ -19,7 +19,7 @@ link: https://nunq.github.io/courseview/
 ## local setup
 
 - get your `inf-bachelor.html` / `inf-master.html`
-- `python parse.py -i input.html -o datasets/courses_(ba|ma)_(ss|ws)YY.json`
+- `uv run parse.py -i input.html -o datasets/courses_inf-(ba|ma)_(ss|ws)YY.json`
 - add it to the manifests file `datasets/manifest.json`
 - `python -m http.server 8000 -b 127.0.0.1`
 
