@@ -285,6 +285,21 @@ body {
   margin-top: 4px;
 }
 #add-event-btn:hover { background: #2980b9; }
+#import-events-btn {
+  width: 100%;
+  background: #fff;
+  color: #2c3e50;
+  border: 1px solid #cbd5df;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 5px;
+}
+#import-events-btn:hover { background: #f0f5fa; }
+#import-events-status { font-size: 11px; margin-top: 5px; }
+#import-events-status.error { color: #b42318; }
+#import-events-status.success { color: #176b42; }
 
 /* ===== OPTIMIZER PANEL ===== */
 #optimizer {
@@ -577,6 +592,9 @@ body {
         <div class="sidebar-section-title">Custom Events</div>
         <div id="custom-events-list"></div>
         <button id="add-event-btn">+ Add Event</button>
+        <button id="import-events-btn" type="button">Import JSON…</button>
+        <input id="import-events-file" type="file" accept=".json,application/json" hidden aria-label="Import custom events JSON file">
+        <div id="import-events-status" role="status" aria-live="polite"></div>
       </div>
     </div>
 
@@ -904,7 +922,7 @@ function buildCustomEvents() {
     .map(ev => {
       const date = dateForDay(ev.day);
       if (!date) return null;
-      const color = eventColor(ev.id, null) || ev.color || '#3498db';
+      const color = colorOverrides[ev.id] || ev.color || '#3498db';
       return {
         id: ev.id,
         title: ev.title,
@@ -1197,7 +1215,7 @@ function renderCustomEventsList() {
 
     const dot = document.createElement('span');
     dot.className = 'course-color-dot';
-    dot.style.background = eventColor(ev.id, null) || ev.color;
+    dot.style.background = colorOverrides[ev.id] || ev.color || '#3498db';
 
     const title = document.createElement('span');
     title.style.flex = '1';
@@ -1449,6 +1467,83 @@ document.getElementById('sidebar-toggle').addEventListener('click', () => {
    ===================================================================== */
 document.getElementById('add-event-btn').addEventListener('click', () => {
   openModal({});
+});
+
+/* =====================================================================
+   IMPORT CUSTOM EVENTS
+   ===================================================================== */
+const importEventsFile = document.getElementById('import-events-file');
+const importEventsStatus = document.getElementById('import-events-status');
+
+function showImportStatus(message, isError = false) {
+  importEventsStatus.textContent = message;
+  importEventsStatus.className = isError ? 'error' : 'success';
+}
+
+function validateImportedEvent(event, index) {
+  const label = `Event ${index + 1}`;
+  if (!event || typeof event !== 'object' || Array.isArray(event)) {
+    throw new Error(`${label} must be an object.`);
+  }
+  const title = typeof event.title === 'string' ? event.title.trim() : '';
+  if (!title) throw new Error(`${label} needs a title.`);
+  if (!Object.hasOwn(DAY_OFFSETS, event.day)) {
+    throw new Error(`${label} needs a weekday from monday to friday.`);
+  }
+  const validTime = time => typeof time === 'string' &&
+    /^([01]\d|2[0-3]):[0-5]\d$/.test(time);
+  if (!validTime(event.timeStart) || !validTime(event.timeEnd) ||
+      event.timeStart >= event.timeEnd) {
+    throw new Error(`${label} needs valid HH:MM times with the end after the start.`);
+  }
+  for (const field of ['room', 'notes']) {
+    if (event[field] !== undefined && typeof event[field] !== 'string') {
+      throw new Error(`${label}: ${field} must be text.`);
+    }
+  }
+  const color = event.color === undefined ? '#3498db' : event.color;
+  if (typeof color !== 'string' || !/^#[0-9a-fA-F]{6}$/.test(color)) {
+    throw new Error(`${label} needs a six-digit hex color, such as #3498db.`);
+  }
+  return {
+    title,
+    day: event.day,
+    timeStart: event.timeStart,
+    timeEnd: event.timeEnd,
+    room: (event.room || '').trim(),
+    notes: (event.notes || '').trim(),
+    color,
+  };
+}
+
+document.getElementById('import-events-btn').addEventListener('click', () => {
+  importEventsFile.click();
+});
+
+importEventsFile.addEventListener('change', async () => {
+  const file = importEventsFile.files[0];
+  if (!file) return;
+  try {
+    const data = JSON.parse(await file.text());
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error('The file must contain a nonempty array of events.');
+    }
+    const events = data.map(validateImportedEvent);
+    for (const event of events) {
+      const id = `custom-${crypto.randomUUID()}`;
+      customEvents.push({ id, ...event });
+      checkedState[id] = true;
+    }
+    lsSet(LS_CUSTOM, customEvents);
+    lsSet(dsKey(LS_CHECKED), checkedState);
+    renderCustomEventsList();
+    refreshCalendar();
+    showImportStatus(`Imported ${events.length} event${events.length === 1 ? '' : 's'}.`);
+  } catch (error) {
+    showImportStatus(`Import failed: ${error.message}`, true);
+  } finally {
+    importEventsFile.value = '';
+  }
 });
 
 /* =====================================================================
